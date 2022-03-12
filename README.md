@@ -1,6 +1,22 @@
 # Dotfiles
 My Linux settings
 
+|                     |                                                                                                               |
+| ------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Window Manager      | [BSPWM](https://github.com/baskerville/bspwm)                                                                 |
+| GTK Theme           | [Catppuccin for GTK](https://github.com/catppuccin/gtk)                                                       |
+| Icon Theme          | [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)                                       |
+| UI Font             | [Inter](https://github.com/rsms/inter)                                                                        | 
+| Terminal            | [Foot](https://codeberg.org/dnkl/foot) [Alacritty](https://github.com/alacritty/alacritty)                    |
+| Terminal Font       | [Iosevka](https://github.com/be5invis/Iosevka)                                                                |
+| PDF Viewer          | [Zathura](https://git.pwmt.org/pwmt/zathura)                                                                  |
+| Editor              | [Neovim](https://neovim.io/)                                                                                  |
+| Shell               | [Zsh](https://www.zsh.org/)                                                                                   |
+| Wallpaper           | [Nodame Cantabile](./assets/wallpaper.png)                                                                    |
+| Colorscheme         | [Rosé Pine Dawn](https://github.com/rose-pine/)                                                               |
+
+
+
 ## Screenshots - Setup 2.0 
 
 #### BSPWM Desktop
