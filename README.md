@@ -7,10 +7,10 @@ My Linux settings
 ![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/desktop.png)
 
 ### Neofetch
-![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/neofetch.png)
+![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/neofetch-cava.png)
 
 #### Ncmpcpp
-![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/ncmpcpp-cava.png)
+![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/ncmpcpp.png)
 
 
 ## Screenshots - Setup 1.0 
