@@ -1,0 +1,201 @@
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;;
+;;	    ____        __      __              
+;;	   / __ \____  / /_  __/ /_  ____ ______
+;;	  / /_/ / __ \/ / / / / __ \/ __ `/ ___/
+;;	 / ____/ /_/ / / /_/ / /_/ / /_/ / /    
+;;	/_/    \____/_/\__, /_.___/\__,_/_/     
+;;	              /____/                    
+;;
+;; Created By Moises
+;;
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+[global/wm]
+margin-bottom = 0
+margin-top = 0
+
+include-file = ~/.config/bspwm/polybar/bin/colors
+include-file = ~/.config/bspwm/polybar/bin/modules
+
+;  _                    
+; | |__   __ _ _ __ ___ 
+; | '_ \ / _` | '__/ __|
+; | |_) | (_| | |  \__ \
+; |_.__/ \__,_|_|  |___/
+
+
+[bar/base]
+enable-ipc = true
+font-0 = "JetBrains Mono:style=Regular:size=9;2"
+font-1 = "icomoon\-feather:size=10;2"
+font-2 = "Iosevka Nerd Font:size=10;2"
+font-3 = "Linearicons\-Free:size=10;2"
+;font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=9;2"
+;font-4 = "Material Icons:style=Regular:size=9;2"
+;font-5 = "Fantasque Sans Mono:pixelsize=9;2"
+
+
+
+padding = 0
+border-size = 2
+border-color = ${color.Peach}
+
+height = 30
+radius = 0
+;Works very well with a radius like this! Put it on every bar.
+
+background = ${color.Black-2}
+foreground = ${color.White}
+override-redirect=false
+offset-y = 5
+;radius = 0
+
+wm-restack = bspwm
+
+[bar/top-ws]
+inherit = bar/base
+width = 22.0%
+
+
+offset-x = 1%
+line-size = 1
+
+modules-center = bspwm
+
+[bar/top-title]
+inherit = bar/base
+width = 21%
+
+offset-x = 25.5%
+
+modules-left = mod title
+modules-center = 
+
+[bar/top-music]
+inherit = bar/base
+enable-ipc = true
+width = 23%
+
+offset-x = 48.5%
+
+; Spotify (uses playerctl)
+; modules-left = previous playpause next 
+; modules-center = spotify
+; Mpd
+modules-left = mpd mpd-scroll previous playpause next spotify
+modules-center =  
+
+[bar/top-tray]
+inherit = bar/base
+width = 25%
+
+offset-x = 73.8%
+
+modules-left = 
+modules-right = battery backlight volume network date
+
+
+;monitor = 
+;monitor-fallback =
+;monitor-strict = false
+;override-redirect = false
+;bottom = false
+;fixed-center = true
+;width = 100%
+;height = 28
+;offset-x = 0
+;offset-y = 0
+
+;background = ${color.Black-2}
+;foreground = ${color.White}
+
+;radius-top = 0.0
+;radius-bottom = 0.0
+
+;padding = 0
+
+;module-margin-left = 0
+;module-margin-right = 0
+
+;font-0 = "JetBrains Mono:style=Regular:size=9;2"
+;font-1 = "Material Icons:style=Regular:size=9;2"
+;font-2 = "Fantasque Sans Mono:pixelsize=9;2"
+;font-3 = "Iosevka Nerd Font:size=12;2"
+;font-2 = "Iosevka Nerd Font:size=16;3"
+;font-3 = "icomoon\-feather:size=10;2"
+;font-3 = "Linearicons\-Free:size=14;5"
+;font-5 = JetBrains Mono:style=Regular:size=10;2
+;font-6 = Material Icons:style=Regular:size=9;2
+;font-4 = "Noto Sans:size=9;3"
+;font-4 = "icomoon\-feather:size=10;2"
+;font-5 = "Iosevka Nerd Font:size=20;5"
+
+; term browser files settings sep2 
+;modules-left = menu sep title
+;;screenshot sep2 title
+;modules-center = date
+; pkg
+;modules-right =  pkg sep backlight volume network sep sysmenu
+
+;separator =
+
+;spacing = 0
+
+;dim-value = 1.0
+
+;wm-name = bspwm
+;locale = 
+;tray-position = none
+;tray-detached = false
+;tray-maxsize = 16
+;tray-transparent = false
+
+;tray-background = ${root.background}
+
+;tray-offset-x = 0
+;tray-offset-y = 0
+;tray-padding = 0
+
+;tray-scale = 1.0
+;enable-ipc = true
+
+;click-left = 
+;click-middle = 
+;click-right =
+;double-click-left =
+;double-click-middle =
+;double-click-right =
+
+;cursor-click = 
+;cursor-scroll = 
+;wm-restack = bspwm
+
+; bspwm
+;scroll-up = bspc desktop -f prev.local
+;scroll-down = bspc desktop -f next.local
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+;; Application Settings
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = true
+
+;
+
+
+;;-_-_-_-_-_-_-_-_-_-_
+;;	    __________  ______
+;;	   / ____/ __ \/ ____/
+;;	  / __/ / / / / /_    
+;;	 / /___/ /_/ / __/    
+;;	/_____/\____/_/       
+;;
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
