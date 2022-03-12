@@ -6,10 +6,10 @@ My Linux settings
 ## Screenshots - Setup 1.0 
 
 #### BSPWM Desktop
-![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/desktop.png)
+![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-1.0/desktop.png)
 
 ### Neofetch
-![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/neofetch.png)
+![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-1.0/neofetch.png)
 
 #### Ncmpcpp
-![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/ncmpcpp.png)
+![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-1.0/ncmpcpp.png)
