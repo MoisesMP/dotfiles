@@ -7,10 +7,11 @@ alt + Return
 	sh -c "$HOME/.bin/draw"
 
 super + Return
-	  alacritty 
+	  kitty
+	  #alacritty 
 
 alt + t
-	$HOME/.config/bspwm/bspwmfloat  alacritty  -name Float
+	$HOME/.config/bspwm/bspwmfloat  kitty  -name Float
 
 # program launcher
 alt + F1
@@ -23,6 +24,9 @@ super + m
 
 super + x
 	sh ~/.config/bspwm/bin/sysmenu
+
+super + n 
+	networkmanager_dmenu
 
 #super + {w,x,r,e,l}
 #	sh ~/.config/bspwm/rofi/bin/{windows,mpd,powermenu,asroot,screenshot,network}
@@ -44,7 +48,7 @@ super + p
 
 # Lockscreen
 ctrl + alt + l
-    bsplock
+    betterlockscreen -l
 
 
 ##---------- System Keys ----------##

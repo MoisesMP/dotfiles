@@ -79,7 +79,6 @@ enable-ipc = true
 width = 23%
 
 offset-x = 48.5%
-
 ; Spotify (uses playerctl)
 ; modules-left = previous playpause next 
 ; modules-center = spotify

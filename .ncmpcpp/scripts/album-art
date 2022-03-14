@@ -4,11 +4,11 @@
 
 # SETTINGS
 music_library="$HOME/Música"
-padding_top=3
-padding_bottom=0
-padding_right=0
+padding_top=0
+padding_bottom=1
+padding_right=1
 max_width=40
-reserved_playlist_cols=31
+reserved_playlist_cols=0
 reserved_cols_in_percent="false"
 force_square="true"
 square_alignment="top"
@@ -18,8 +18,8 @@ padding_left=0
 # Only set this if the geometries are wrong or ncmpcpp shouts at you to do it.
 # Visually select/highlight a character on your terminal, zoom in an image 
 # editor and count how many pixels a character's width and height are.
-font_height=
-font_width=
+#font_height=
+#font_width=
 
 main() {
     kill_previous_instances >/dev/null 2>&1

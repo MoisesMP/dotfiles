@@ -1,9 +1,16 @@
 #!/bin/bash
 
-player_status=$(playerctl status 2> /dev/null)
+update_hooks() {
+    while IFS= read -r id
+    do
+        polybar-msg -p "$id" hook playpause $2 1>/dev/null 2>&1
+    done < <(echo "$1")
+}
+
+player_status=$(playerctl status -p spotify 2> /dev/null)
 
 if [[ $? -eq 0 ]]; then
-    metadata="$(playerctl metadata artist) - $(playerctl metadata title)"
+    metadata="$(playerctl metadata artist -p spotify) - $(playerctl metadata title -p spotify)"
 fi
 
 # Foreground color formatting tags are optional

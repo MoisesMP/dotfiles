@@ -559,7 +559,9 @@ exec = echo "  "
 exec-if = "pgrep spotify"
 format-background = ${color.Peach}
 format-foreground = ${color.Black-3}
-click-left = playerctl previous
+tail = true
+interval = 1
+click-left = playerctl previous -p spotify
 
 
 [module/next]
@@ -568,7 +570,9 @@ exec = echo "  "
 exec-if = "pgrep spotify"
 format-background = ${color.Peach}
 format-foreground = ${color.Black-3}
-click-left = playerctl next
+tail = true
+interval = 1
+click-left = playerctl next -p spotify
 
 [module/playpause]
 type = custom/script
@@ -577,7 +581,7 @@ exec-if = "pgrep spotify"
 format-background = ${color.Peach}
 format-foreground = ${color.Black-3}
 tail = true
-interval = 0
+interval = 1
 click-left = "playerctl -p spotify play-pause"
 
 
