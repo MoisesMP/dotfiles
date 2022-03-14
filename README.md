@@ -7,7 +7,7 @@ My Linux settings
 | GTK Theme           | [Catppuccin for GTK](https://github.com/catppuccin/gtk)                                                       |
 | Icon Theme          | [Catppuccin for Papirus](https://github.com/catppuccin/papirus-folders)                                       |
 | UI Font             | [JetBrains](https://www.jetbrains.com/es-es/lp/mono/)                                                         | 
-| Terminal            | [Alacritty](https://github.com/alacritty/alacritty)                                                           |
+| Terminal            | [Kitty](https://sw.kovidgoyal.net/kitty/)                                                                     |
 | Terminal Font       | [JetBrains](https://www.jetbrains.com/es-es/lp/mono/)                                                         |
 | Shell               | [Zsh](https://www.zsh.org/)                                                                                   |
 | Colorscheme         | [Catppuccin](https://github.com/catppuccin/catppuccin)                                                        |
