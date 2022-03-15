@@ -1,7 +1,7 @@
 # Dotfiles
 My Linux settings
 
-|                     |                                                                                                               |
+| System              | Package |
 | ------------------- | ------------------------------------------------------------------------------------------------------------- |
 | Window Manager      | [BSPWM](https://github.com/baskerville/bspwm)                                                                 |
 | GTK Theme           | [Catppuccin for GTK](https://github.com/catppuccin/gtk)                                                       |
