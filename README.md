@@ -2,7 +2,7 @@
 My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
 
 ## Installation
-
+* [Preview](#screenshots)
 * [Packages](#packages)
 * [Dotfiles](#dotfiles-install)
 
