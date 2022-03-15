@@ -8,7 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="ar-round"
+# "robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,11 +71,56 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    zsh-autosuggestions
+    zsh-completions 
+    zsh-syntax-highlighting 
+    bgnotify
+)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+### ALIASES ###
+
+alias c='clear'
+
+# root privileges
+alias doas="doas --"
+
+# navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+# vim and emacs
+alias vim='nvim'
+alias v='nvim'
+
+# Changing "ls" to "exa"
+alias l='exa --color=always --group-directories-first --icons' # my preferred listing
+alias ls='exa -al --color=always --group-directories-first --icons' # my preferred listing
+alias la='exa -a --color=always --group-directories-first --icons'  # all files and dirs
+alias ll='exa -l --color=always --group-directories-first --icons'  # long format
+alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
+alias l.='exa -a | egrep "^\."'
+
+# pacman and yay
+alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs
+alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
+alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
+alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
+alias cleanup='sudo pacman -Rns (pacman -Qtdq)'  # remove orphaned packages
+
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -99,4 +145,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
+export PATH="$PATH:$HOME/.spicetify"
+#neofetch
