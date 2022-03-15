@@ -4,8 +4,7 @@ My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
 
 
 
-| System              | Package |
-| ------------------- | ------------------------------------------------------------------------------------------------------------- |
+System               Package 
 Window Manager: [BSPWM](https://github.com/baskerville/bspwm) 
 GTK Theme: [Catppuccin for GTK](https://github.com/catppuccin/gtk)
 Icon Theme: [Catppuccin for Papirus](https://github.com/catppuccin/papirus-folders)
