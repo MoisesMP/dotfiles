@@ -20,10 +20,13 @@ My Linux settings
 ![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/desktop.png)
 
 ### Neofetch
-![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/neofetch-cava.png)
+![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/neofetch.png)
 
 #### Ncmpcpp
 ![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/ncmpcpp.png)
+
+### Cava
+![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/cava.png)
 
 
 ## Screenshots - Setup 1.0 
