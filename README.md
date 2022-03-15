@@ -5,6 +5,7 @@ My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
 * [Preview](#screenshots)
 * [Packages](#packages)
 * [Dotfiles](#dotfiles-install)
+* [Notes](#notes)
 
 ## Packages
 - Window Manager: [BSPWM](https://github.com/baskerville/bspwm) 
@@ -81,21 +82,16 @@ My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
    cp .nanorc ~/
 ```
 
+
+## Screenshots 
+![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/desktop.png)
+![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/neofetch.png)
+![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/ncmpcpp.png)
+![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/cava.png)
+
+
 ## Notes
 To change the wallpaper you only need to change the background of betterlockscreen
 ```sh
    betterlockscreen -u /path/to/image
 ```
-
-## Screenshots 
-![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/desktop.png)
-![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/neofetch.png)
-![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/ncmpcpp.png)
-![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/cava.png)
-
-
-## Screenshots - Setup 1.0 
-
-![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-1.0/desktop.png)
-![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-1.0/neofetch.png)
-![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-1.0/ncmpcpp.png)
