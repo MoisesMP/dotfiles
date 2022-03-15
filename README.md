@@ -7,6 +7,13 @@ My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
 * [Dotfiles](#dotfiles-install)
 * [Notes](#notes)
 
+
+## Screenshots 
+![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/desktop.png)
+![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/neofetch.png)
+![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/ncmpcpp.png)
+![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/cava.png)
+
 ## Packages
 - Window Manager: [BSPWM](https://github.com/baskerville/bspwm) 
 - GTK Theme: [Catppuccin for GTK](https://github.com/catppuccin/gtk)
@@ -81,13 +88,6 @@ My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
 ```sh
    cp .nanorc ~/
 ```
-
-
-## Screenshots 
-![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/desktop.png)
-![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/neofetch.png)
-![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/ncmpcpp.png)
-![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/cava.png)
 
 
 ## Notes
