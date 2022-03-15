@@ -1,9 +1,6 @@
 # Dotfiles
 My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
 
-
-
-
 ## System packages
 - Window Manager: [BSPWM](https://github.com/baskerville/bspwm) 
 - GTK Theme: [Catppuccin for GTK](https://github.com/catppuccin/gtk)
@@ -28,11 +25,24 @@ My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
 - Settings Manager: [LXAppearance](https://wiki.lxde.org/en/LXAppearance)/kvantum
 - Lockscreen: [betterlockscreen](https://github.com/betterlockscreen/betterlockscreen) 
 #### Others
+- [Xfce4 Power Manager](https://docs.xfce.org/xfce/xfce4-power-manager/start)
+- [Ksuperkey](https://github.com/hanschen/ksuperkey)
+- [Xsettingsd](https://github.com/derat/xsettingsd)
+- [Xsetroot](https://www.x.org/archive/X11R7.5/doc/man/man1/xsetroot.1.html)
 - Terminal
    - [exa](https://github.com/ogham/exa)
    - [doas](https://github.com/slicer69/doas)
+- Fonts Polybar
+   - [JetBrains](https://www.jetbrains.com/es-es/lp/mono/)
+   - [Icomoon-feather](https://icomoon.io/icons-icomoon.html)
+   - [Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts)
+   - [Linearicons](https://linearicons.com/)
 
-
+## Notes
+To change the wallpaper you only need to change the background of betterlockscreen
+```sh
+   betterlockscreen -u /path/to/image
+```
 
 ## Screenshots 
 ![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/desktop.png)
