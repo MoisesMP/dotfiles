@@ -1,7 +1,12 @@
 # Dotfiles
 My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
 
-## System packages
+## Installation
+
+* [Packages](#packages)
+* [Dotfiles](#dotfiles-install)
+
+## Packages
 - Window Manager: [BSPWM](https://github.com/baskerville/bspwm) 
 - GTK Theme: [Catppuccin for GTK](https://github.com/catppuccin/gtk)
 - Icon Theme: [Catppuccin for Papirus](https://github.com/catppuccin/papirus-folders)
@@ -37,6 +42,44 @@ My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
    - [Icomoon-feather](https://icomoon.io/icons-icomoon.html)
    - [Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts)
    - [Linearicons](https://linearicons.com/)
+
+## Dotfiles install
+1. Clone this repository somewhere on your machine.
+```sh
+   git clone https://github.com/MoisesMP/dotfiles.git
+```
+2. Go to dotfiles dir
+```sh
+   cd dotfiles
+```
+3. Copy all files to their respective directories 
+```sh
+   cp -r .config/ ~/
+```
+```sh
+   cp .ncmpcpp/ ~/
+```
+```sh
+   cp .mpd/ ~/
+```
+```sh
+   cp .oh-my-zsh/ ~/
+```
+```sh
+   cp .wallpaper/ ~/
+```
+```sh
+   sudo cp music /usr/local/bin/
+```
+```sh
+   cp .Xresources ~/
+```
+```sh
+   cp .zshrc ~/
+```
+```sh
+   cp .nanorc ~/
+```
 
 ## Notes
 To change the wallpaper you only need to change the background of betterlockscreen
