@@ -1,5 +1,8 @@
 # Dotfiles
-My Linux settings
+My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
+
+
+
 
 | System              | Package |
 | ------------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -14,34 +17,15 @@ My Linux settings
 
 
 
-## Screenshots - Setup 2.0 
-
-#### BSPWM Desktop
-![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/desktop.png)
-
-### Neofetch
-![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/neofetch.png)
-
-#### Ncmpcpp
-![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/ncmpcpp.png)
-
-### Cava
-![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/cava.png)
+## Screenshots 
+![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/desktop.png)
+![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/neofetch.png)
+![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/ncmpcpp.png)
+![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-2.0/cava.png)
 
 
 ## Screenshots - Setup 1.0 
 
-#### BSPWM Desktop
 ![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-1.0/desktop.png)
-
-### Neofetch
 ![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-1.0/neofetch.png)
-
-#### Ncmpcpp
-![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-1.0/ncmpcpp.png)
-
-### Neofetch
-![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-1.0/neofetch.png)
-
-#### Ncmpcpp
 ![Desktop BSPWM](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots-1.0/ncmpcpp.png)
