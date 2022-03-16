@@ -97,18 +97,29 @@ To change the wallpaper you only need to change the background of betterlockscre
    betterlockscreen -u /path/to/image
 ```
 **Network Module**
-If you have an error with the wifi module "[module/network]", change the network interface to
-```sh
+If you have an error with the wifi module, change the network interface to
+```cfg
    ~/.config/bspwm/polybar/bin/modules
 ```
+```cfg
+  ...
+   [module/network]
+   type = internal/network
+   interface = wlan0
+  ...
+ ```
 
-   - - To know the name of the network interface, type in the terminal
-         ```sh
-         ip addr
-         ```
-   - - note the name of the wifi network interface begins with wl
+   -- To know the name of the network interface, type in the terminal
+      ```sh
+         ip add
+      ```
+   -- note the name of the wifi network interface begins with wl
 
 **MPD Music Directory**
+Edit
+```cfg
+   ~/.mpd/mpd.conf
+```
 ```cfg
   ...
   
@@ -119,3 +130,29 @@ If you have an error with the wifi module "[module/network]", change the network
 Change it to your preferred directory
 
 **Ncmpcpp Music Directory**
+Edit
+```cfg
+   ~/.ncmpcpp/config
+```
+```cfg
+   ~/.ncmpcpp/config-art
+```
+```cfg
+  ...
+  
+   music_directory     "~/Music"
+  
+  ...
+ ```
+ Change it to your preferred directory
+```cfg
+   ~/.ncmpcpp/scripts/album-art
+```
+```cfg
+  ...
+  
+   music_library="$HOME/Music"
+  
+  ...
+ ```
+ Change it with the same directory of the previous steps
