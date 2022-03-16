@@ -92,12 +92,12 @@ My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
 
 ## User's configuration
 **Wallpaper set**
-- To change the wallpaper you only need to change the background of betterlockscreen
+To change the wallpaper you only need to change the background of betterlockscreen
 ```sh
    betterlockscreen -u /path/to/image
 ```
 **Network Module**
-- If you have an error with the wifi module "[module/network]", change the network interface to
+If you have an error with the wifi module "[module/network]", change the network interface to
 ```sh
    ~/.config/bspwm/polybar/bin/modules
 ```
@@ -116,4 +116,6 @@ My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
   
   ...
  ```
+Change it to your preferred directory
+
 **Ncmpcpp Music Directory**
