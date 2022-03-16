@@ -91,7 +91,18 @@ My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
 
 
 ## Notes
-To change the wallpaper you only need to change the background of betterlockscreen
+- To change the wallpaper you only need to change the background of betterlockscreen
 ```sh
    betterlockscreen -u /path/to/image
 ```
+
+- If you have an error with the wifi module ( [module/network] ), please change the network interface in
+```sh
+   ~/.config/bspwm/polybar/bin/modules
+```
+  - To know the name of the network interface, type in the terminal
+   ```sh
+   ip addr
+   ```
+   - note the name of the wifi network interface starts with wl
+ 
