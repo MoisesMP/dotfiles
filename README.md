@@ -109,14 +109,14 @@ If you have an error with the wifi module, change the network interface to
   ...
  ```
 
-   -- To know the name of the network interface, type in the terminal
+   - - To know the name of the network interface, type in the terminal
       ```sh
          ip add
       ```
-   -- note the name of the wifi network interface begins with wl
+   - - note the name of the wifi network interface begins with wl
 
 **MPD Music Directory**
-Edit
+- Edit
 ```cfg
    ~/.mpd/mpd.conf
 ```
@@ -130,7 +130,7 @@ Edit
 Change it to your preferred directory
 
 **Ncmpcpp Music Directory**
-Edit
+- Edit
 ```cfg
    ~/.ncmpcpp/config
 ```
