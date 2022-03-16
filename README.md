@@ -96,13 +96,13 @@ My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
    betterlockscreen -u /path/to/image
 ```
 
-- If you have an error with the wifi module ( [module/network] ), please change the network interface in
+- If you have an error with the wifi module "[module/network]", change the network interface to
 ```sh
    ~/.config/bspwm/polybar/bin/modules
 ```
-  - To know the name of the network interface, type in the terminal
+  - - To know the name of the network interface, type in the terminal
    ```sh
    ip addr
    ```
-   - note the name of the wifi network interface starts with wl
+  - - note the name of the wifi network interface begins with wl
  
