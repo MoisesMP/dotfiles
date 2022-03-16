@@ -100,9 +100,10 @@ My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
 ```sh
    ~/.config/bspwm/polybar/bin/modules
 ```
-    - To know the name of the network interface, type in the terminal
+
+   - - To know the name of the network interface, type in the terminal
          ```sh
          ip addr
          ```
-    - note the name of the wifi network interface begins with wl
+   - - note the name of the wifi network interface begins with wl
  
