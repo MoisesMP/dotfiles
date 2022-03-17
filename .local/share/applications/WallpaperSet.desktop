@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Wallpaper Set
+Comment=Wallpaper
+Exec=bash -c "${HOME}/.config/bspwm/bin/Wall"
+Icon=archipelago
+Terminal=false
+Type=Application
+Categories=System

@@ -80,7 +80,7 @@ for i in ${office[@]}; do
    bspc rule -a $i desktop='^5' follow=on focus=on; done
 
 # 6 > Communication
-declare -a comm=(Thunderbird TelegramDesktop Hexchat)
+declare -a comm=(Thunderbird TelegramDesktop Hexchat SiloWhatsappWeb)
 for i in ${comm[@]}; do
    bspc rule -a $i desktop='^6' follow=on focus=on; done
 
@@ -89,12 +89,13 @@ declare -a media=(Audacity Music MPlayer Lxmusic Inkscape Gimp-2.10 obs)
 for i in ${media[@]}; do
    bspc rule -a $i desktop='^7' state=floating follow=on focus=on; done
 
-bspc config external_rules_command ~/.config/bspwm/bin/spotify-rules
+bspc config external_rules_command ~/.config/bspwm/bin/spotify-rule
 
 # 8 > settings
 bspc rule -a 'VirtualBox Manager' desktop='^8' follow=on focus=on
 bspc rule -a GParted desktop='^8' follow=on focus=on
 bspc rule -a Nitrogen desktop='^8' follow=on focus=on
+bspc rule -a WallpaperSet desktop='^8' state=floating follow=on focus=on
 declare -a settings=(Lxappearance Lxtask Lxrandr Arandr \
 System-config-printer.py Pavucontrol Exo-helper-1 \
 Xfce4-power-manager-settings)
@@ -102,7 +103,7 @@ for i in ${settings[@]}; do
    bspc rule -a $i desktop='^8' state=floating follow=on focus=on; done
 
 # special rules
-declare -a floating=(alacritty-float Pcmanfm Onboard Yad 'Firefox:Places' \
+declare -a floating=(alacritty-float Onboard Yad 'Firefox:Places' \
 Viewnior feh Nm-connection-editor)
 for i in ${floating[@]}; do
    bspc rule -a $i state=floating follow=on focus=on; done
@@ -133,9 +134,9 @@ killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager
 xsettingsd &
 
 # polkit agent
-#if [[ ! `pidof xfce-polkit` ]]; then
-#	/usr/lib/xfce-polkit/xfce-polkit &
-#fi
+if [[ ! `pidof xfce-polkit` ]]; then
+	/usr/lib/xfce-polkit/xfce-polkit &
+fi
 
 # Lauch keybindings daemon
 sxhkd &
@@ -151,8 +152,9 @@ xfce4-power-manager &
 xsetroot -cursor_name left_ptr
 
 # Restore wallpaper
-wallpaper
+#wallpaper
 #bash $HOME/.fehbg
+nitrogen --restore &
 
 
 # Start mpd
