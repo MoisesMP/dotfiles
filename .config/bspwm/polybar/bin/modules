@@ -19,7 +19,7 @@ label-volume = %percentage%%
 label-muted = "婢"
 label-muted-foreground = ${color.Gray-1}
 label-muted-padding = 2
-
+interval = 5
 click-left = pavucontrol
 
 ramp-volume-0 = 奄
@@ -42,6 +42,7 @@ ramp-volume-6-foreground = ${color.Red}
 [module/backlight]
 type = internal/xbacklight
 
+interval = 1
 card = intel_backlight
 format = <ramp> <label>
 label = %percentage%%
@@ -191,12 +192,34 @@ click-left = image=$(date +%s).png && maim -s -s -b 5.0 -p -5 -c 1,0,0.294 "~/Im
 [module/pkg]
 type = custom/script
 exec = ~/.config/bspwm/polybar/scripts/updates.sh
-format-foreground = ${color.Red}
-;;format-background = ${color-}
-format-padding = 2
+interval = 7200
+initial = 1
+format-prefix = ""
+format-padding = 1
+format-prefix-foreground = ${color.Red}
+click-left = st -e yay -Syu
 tail = true
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/workspaces]
+
+type = internal/bspwm
+label-focused = " "
+;""
+;""
+label-focused-foreground = ${color.Peach}
+label-occupied = ${self.label-focused}
+label-occupied-foreground = ${color.White}
+label-urgent = ${self.label-focused}
+label-urgent-foreground = ${color.Red}
+label-empty = ${self.label-focused}
+label-empty-foreground = ${color.Gray-0}
+label-separator = " "
+; "∙"
+;label-separator-padding = 0
+;label-separator-foreground = ${color.Red}
+; vim:ft=dosini
 
 
 [module/bspwm]
@@ -228,20 +251,20 @@ label-monitor = %name%
 
 
 label-focused = %name%
-label-focused-foreground = ${color.Blue}
+label-focused-foreground = ${color.Sky}
 ;;label-focused-background = ${color.}
-label-focused-underline = ${color.Sky}
-label-focused-padding = 1
+label-focused-underline = ${color.Peach}
+label-focused-padding = 2
 
 label-occupied = %name%
-label-occupied-foreground = ${color.Yellow}
+label-occupied-foreground = ${color.Peach}
 ;;label-occupied-background = ${color.}
 label-occupied-padding = 1
 
 label-urgent = %name%
-label-urgent-foreground = ${color.Red}
+label-urgent-foreground = ${color.Maroon}
 ;;label-urgent-background = ${color.}
-label-urgent-underline = ${color.Red}
+label-urgent-underline = ${color.Maroon}
 label-urgent-padding = 1
 
 label-empty = %name%
@@ -253,7 +276,7 @@ label-separator = "∙"
 label-separator-padding = 0
 label-separator-foreground = ${color.Red}
 
-format-underline = ${color.Blue}
+;format-underline = ${color.Peach}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -468,7 +491,7 @@ type = internal/mpd
 
 interval = 2
 
-format-online = <icon-prev> <toggle> <icon-next>
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next>
 format-online-padding = 1
 format-online-background = ${color.Peach}
 format-online-foreground = ${color.Black-3}
@@ -480,18 +503,11 @@ label-song-ellipsis = true
 label-offline = "MPD is offline"
 
 ; Only applies if <icon-X> is used
-icon-play = 
-icon-pause = 
-icon-stop = 
-icon-prev = 
-icon-next = 
-icon-seekb = ⏪
-icon-seekf = ⏩
-icon-random = 🔀
-icon-repeat = 🔁
-icon-repeatone = 🔂
-icon-single = 🔂
-icon-consume = ✀
+icon-play = 契
+icon-pause = 
+icon-stop = 栗
+icon-prev = 玲
+icon-next = 怜
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -526,7 +542,7 @@ click-right = playerctl next
 type = custom/script
 interval = 1
 format = <label>
-label = 
+label = 玲
 exec = ~/.config/bspwm/polybar/scripts/music
 exec-if = "pgrep spotify"
 click-left = playerctl previous
@@ -535,7 +551,7 @@ click-left = playerctl previous
 type = custom/script
 interval = 1
 format = <label>
-label = 
+label = 契
 exec = ~/.config/bspwm/polybar/scripts/music
 exec-if = "pgrep spotify"
 click-left = playerctl play-pause
@@ -544,7 +560,7 @@ click-left = playerctl play-pause
 type = custom/script
 interval = 1
 format = <label>
-label = 
+label = 怜
 ;exec = echo "next-song-symbol"
 exec = ~/.config/bspwm/polybar/scripts/music
 exec-if = "pgrep spotify"
