@@ -11,7 +11,9 @@ My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
 ## Screenshots 
 ![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/desktop.png)
 ![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/neofetch.png)
+![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/neovim.png)
 ![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/ncmpcpp.png)
+![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/wallpaperset.png)
 ![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/cava.png)
 
 ## Packages
@@ -47,9 +49,7 @@ My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
    - [doas](https://github.com/slicer69/doas)
 - Fonts Polybar
    - [JetBrains](https://www.jetbrains.com/es-es/lp/mono/)
-   - [Icomoon-feather](https://icomoon.io/icons-icomoon.html)
    - [Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts)
-   - [Linearicons](https://linearicons.com/)
 
 ## Dotfiles install
 1. Clone this repository somewhere on your machine.
