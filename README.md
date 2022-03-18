@@ -89,7 +89,7 @@ My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
    cp .nanorc ~/
 ```
 ```sh
-   ln -s ../.config/bspwm/bspwm_window_titles.sh /usr/bin/bspwm_window_titles
+   ln -s ../.config/bspwm/bspwm_window_titles.sh /usr/bin/bspwm_window_title
 ```
 
 ## User's configuration
