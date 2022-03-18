@@ -1,8 +1,7 @@
-Google-chrome 
-Firefox 
-Code 
-jetbrains-phpstorm 
-Slack 
-kitty 
-Nautilus 
+Google-chrome 
+Firefox 
+Code 
+kitty 
+Pcmanfm 
+Thunar 
 Fallback ·

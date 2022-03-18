@@ -27,6 +27,8 @@ include-file = ~/.config/bspwm/polybar/bin/modules
 
 
 [bar/base]
+monitor   = 
+;${env:MONITOR}
 enable-ipc = true
 font-0 = "JetBrains Mono:style=Regular:size=9:antialias=true;2"
 ;font-1 = "icomoon\-feather:size=10:antialias=true;2"
@@ -46,6 +48,8 @@ radius = 0
 
 background = ${color.Black-2}
 foreground = ${color.White}
+;${color.Lavender}
+; ${color.White}
 override-redirect=false
 offset-y = 5
 ;radius = 0
@@ -73,7 +77,9 @@ width = 21%
 
 offset-x = 20.5%
 
-modules-left = mod title
+modules-left = mod windowlist
+;xxwindow
+;title
 modules-center = 
 
 [bar/top-music]

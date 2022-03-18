@@ -114,7 +114,7 @@ format-padding = 1
 label-connected = "%{A1:networkmanager_dmenu &:}%downspeed%%{A}"
 # essid%%{A}"
 
-label-disconnected = "%{A1:networkmanager_dmenu &:} Offline%{A}"
+label-disconnected = "%{A1:networkmanager_dmenu &:} Offline%{A} "
 
 ramp-signal-0 = 
 ramp-signal-1 = 
@@ -404,6 +404,7 @@ type = internal/xwindow
 format-padding = 1
 label = "[ %title:0:17:...% ]"
 label-maxlen = 30
+;label-foreground = ${color.Lavender}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -516,8 +517,6 @@ type = custom/script
 interval = 1
 tail = true
 ;;format = <label>
-label-song = 
-lavel = %output%
 label-padding = 1
 exec = ~/.config/bspwm/polybar/scripts/mpd
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -614,13 +613,17 @@ interval = 1
 
 [module/windowlist]
 type = custom/script
-exec = ${env:P_BSPWM_WINDOW_CMD}
-interval = 0.5
-format = <label>
+tail = true
+exec = ${env:P_BSPWM_WINDOW_CMD} 
+;home/m0d/.config/bspwm/bspwm_window_titles.sh
+;interval = 0
+format-padding = 1
+;,format = <label>
 ;;format-background = ${color.Black-3}
 format-foreground = ${color.Lavender}
 
 [module/xxwindow]
 type = custom/script
-interval = 0
+;tail = true
+interval = 1
 exec = ~/.config/bspwm/polybar/scripts/xxwindow.sh
