@@ -60,44 +60,15 @@ My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
 ```sh
    cd dotfiles
 ```
-3. Copy all files to their respective directories 
+3. run installation script
 ```sh
-   cp -r .config/ ~/
+   chmod +x install.sh
 ```
 ```sh
-   cp .ncmpcpp/ ~/
-```
-```sh
-   cp .mpd/ ~/
-```
-```sh
-   cp .oh-my-zsh/ ~/
-```
-```sh
-   cp .wallpaper/ ~/
-```
-```sh
-   sudo cp music /usr/local/bin/
-```
-```sh
-   cp .Xresources ~/
-```
-```sh
-   cp .zshrc ~/
-```
-```sh
-   cp .nanorc ~/
-```
-```sh
-   ln -s ../.config/bspwm/bspwm_window_titles.sh /usr/bin/bspwm_window_title
+   ./install.sh
 ```
 
 ## User's configuration
-**Wallpaper set**
-To change the wallpaper you only need to change the background of betterlockscreen
-```sh
-   betterlockscreen -u /path/to/image
-```
 **Network Module**
 If you have an error with the wifi module, change the network interface to
 ```cfg
