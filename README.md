@@ -60,7 +60,7 @@ My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
 ```sh
    cd dotfiles
 ```
-3. run installation script
+3. Run installation script
 ```sh
    chmod +x install.sh
 ```
