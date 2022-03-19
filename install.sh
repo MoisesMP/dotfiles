@@ -11,7 +11,6 @@ read input
 
 
 filecopying(){
-
     # install fonts
     #if [ -d ~/local/share/fonts ]
 
@@ -182,7 +181,7 @@ filecopying(){
         cp -r ./ncmpcpp/* ~/.ncmpcpp/
     else
         echo "Installing ncmpcpp configs..."
-        mkdir ~/.ncmpcpp/ &&  cp ./ncmpcpp ~/.ncmpcpp/
+        mkdir ~/.ncmpcpp/ &&  cp -r ./ncmpcpp ~/.ncmpcpp/
     fi
     #
     # Xresources
@@ -246,21 +245,37 @@ filecopying(){
     chmod +x ~/.config/bspwm/bin/*
     chmod +x ~/.config/bspwm/polybar/scripts/*
     
+    #sxhkd &
+    
     echo && echo -en "Press Enter To Continue"
     read input      
 }
 
 
-if [ -d ~/.config  ]; then
+config(){
+    if [ -d ~/.config  ]; then
+        mkdir -p ~/.config/
+        filecopying
+    else
+        
+        filecopying
+    fi
+}
 
-    mkdir -p ~/.config/
-    filecopying
-    exit
-else
-    
-    filecopying
-    exit
-fi
+sxhkd(){
+    if [ pgrep -x sxhkd > /dev/null ]; then
+        killall -9 sxhkd
+        config
+        bspc wm -r
+        exit
+    else
+        config
+        exit
+
+    fi
+}
+
+sxhkd
 
 done 
 #echo "PLEASE MAKE .xinitrc TO LAUNCH, or just use your Display Manager (ie. lightdm or sddm, etc.)" 
