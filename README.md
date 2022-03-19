@@ -1,5 +1,5 @@
 # Dotfiles
-My personal dotfiles for bspwm, ranger, ncmpcpp, firefox, rofi and more!
+My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
 
 ## Installation
 * [Preview](#screenshots)
