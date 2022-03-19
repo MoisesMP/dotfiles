@@ -1,19 +1,17 @@
 #!/bin/env bash
 set -e
 
-homedir = ${HOME}
-
-echo "Welcome!" && sleep 2
+echo "Welcome!" && sleep 1
 
 echo "###########################################################################"
 echo "Will do stuff, get ready"
 echo "###########################################################################"
-echo " "
 echo && echo -en "Press Enter To Continue"
 read input
 
 
 filecopying(){
+
     # install fonts
     #if [ -d ~/local/share/fonts ]
 
@@ -35,12 +33,12 @@ filecopying(){
         cp -r ./config/bspwm/* ~/.config/bspwm/
     else
         echo "Installing bspwm configs..."
-        mkdir ~/.config/bspwm/ && cp -r ./config/bspwm/* ~/.config/bspwm/
+        mkdir ~/.config/bspwm/ && cp -r ./config/bspwm/* ~/.config/bspwm/;
     fi
     #
     # SXHKD
     #
-    if [ -d ~/.config/sxhkd ] 
+    if [ -d ~/.config/sxhkd ]; then
         echo "Shhkd configs detected, backing up..."
         mkdir ~/.config/sxhkd.old/ && mv ~/config/sxhkd/* ~/.config/sxhkd.old/
         echo "Installing sxhkd configs..."
@@ -52,7 +50,7 @@ filecopying(){
     #
     # Kitty
     #
-    if [ -d ~/.config/kitty ]
+    if [ -d ~/.config/kitty ]; then
         echo "Kitty configs detected, backing up..."
         mkdir ~/.config/kitty.old/ && mv ~/.config/kitty/* ~/.config/kitty.old/
         echo "Installing kitty configs..."
@@ -69,7 +67,7 @@ filecopying(){
         mkdir ~/.config/alacritty.old/ && mv ~/.config/alacritty/* ~/.config/alacritty.old/
         echo "Installing alacritty configs..."
         cp -r ./config/alacritty/* ~/.config/alacritty/
-    elif [ -f ~/.config/alacritty.yml ]
+    elif [ -f ~/.config/alacritty.yml ]; then
         echo "Alacritty configs detected, backing up..."
         mv ~/.config/alacritty.yml ~/.config/alacritty.yml.old;
         echo "Installing alacritty configs..."
@@ -93,7 +91,7 @@ filecopying(){
     #
     # Cava 
     #
-    if [ -d ~/.config/cava ]
+    if [ -d ~/.config/cava ]; then
         echo "Cava configs detected, backing up..."
         mkdir ~/.config/cava.old/ && mv ~/.config/cava/* ~/.config/cava.old/
         echo "Installing cava configs..."
@@ -105,7 +103,7 @@ filecopying(){
     #
     # Neofetch
     #
-    if [ -d ~/.config/neofetch ]
+    if [ -d ~/.config/neofetch ]; then
         echo "Neofetch configs detected, backing up..."
         mkdir ~/.config/neofetch.old && mv ~/.config/neofetch/* ~/.config/neofetch.old/
         echo "Installing neofetch configs..."
@@ -117,7 +115,7 @@ filecopying(){
     #
     # Rofi
     #
-    if [ -d ~/.config/rofi ]
+    if [ -d ~/.config/rofi ]; then
         echo "Rofi configs detected, backing up..."
         mkdir ~/.config/rofi.old/ && mv ~/.config/rofi/* ~/.config/rofi.old/
         echo "Installing rofi configs..."
@@ -129,7 +127,7 @@ filecopying(){
     #
     # Networkmanager-dmenu
     #
-    if [ -d ~/.config/networkmanager-dmenu  ]
+    if [ -d ~/.config/networkmanager-dmenu  ]; then
         echo "Networkmanager-dmenu configs detected, backing up..."
         mkdir ~/.configs/networkmanager-dmenu.old/ && mv ~/.config/networkmanager-dmenu/* ~/.config/networkmanager-dmenu.old/
         echo "Installing networkmanager-dmenu configs..."
@@ -141,7 +139,7 @@ filecopying(){
     #
     # Neovim
     #
-    if [ -d ~/.config/nvim ]
+    if [ -d ~/.config/nvim ]; then
         echo "Neovim configs detected,backing up..."
         mkdir ~/.config/nvim.old/ && mv ~/.config/nvim/* ~/.config/nvim.old/
         echo "Installing neovim configs..."
@@ -153,7 +151,7 @@ filecopying(){
     #
     # Ranger
     #
-    if [ -d ~/.config/ranger ]
+    if [ -d ~/.config/ranger ]; then
         echo "Ranger configs detected, backing up..."
         mkdir ~/.config/ranger.old/ && mv ~/.config/ranger/* ~/.config/ranger.old/
         echo "Installing ranger configs..."
@@ -165,7 +163,7 @@ filecopying(){
     #
     # MPD
     #
-    if [ -d ~/.mpd ]
+    if [ -d ~/.mpd ]; then
         echo "MPD configs detected, backing up..."
         mkdir ~/.mpd.old/ && mv ~/.mpd/* ~/.mpd.old/
         echo "Installing mpd configs..."
@@ -177,7 +175,7 @@ filecopying(){
     #
     # Ncmpcpp
     #
-    if [ -d ~/.ncmpcpp ]
+    if [ -d ~/.ncmpcpp ]; then
         echo "Ncmpcpp configs detected, backing up..."
         mkdir ~/.ncmpcpp.old && mv ~/.ncmpcpp ~/.ncmpcpp.old
         echo "Installing ncmpcpp configs..."
@@ -189,7 +187,7 @@ filecopying(){
     #
     # Xresources
     #
-    if [ -f ~/.Xresources ]
+    if [ -f ~/.Xresources ]; then
         echo "Xresources detected, backing up..."
         mv ~/.Xresources ~/.Xresources.old
         echo "Installing Xresources..."
@@ -201,7 +199,7 @@ filecopying(){
     #
     # Zsh
     #
-    if [ -f ~/.zshrc ]
+    if [ -f ~/.zshrc ]; then
         echo "zshrc detected, backing up..."
         mv ~/.zshrc ~/.zshrc.old
         echo "Installing zsh configs..."
@@ -216,7 +214,7 @@ filecopying(){
     # Nanorc
     #
     #
-    if [ -f ~/.nanorc ]
+    if [ -f ~/.nanorc ]; then
         echo "Nanorc detected, backing up..."
         mv ~/.nanorc ~/.nanorc.old
         echo "Installing nanorc configs..."
@@ -224,9 +222,8 @@ filecopying(){
     else
         echo "Installing nanorc configs..."
         cp ./nanorc ~/.nanorc
-        #
-        
-
+    fi   
+    #
     # Wallpaper
     #
     if [ -d ~/.wallpaper ]; then
@@ -249,15 +246,12 @@ filecopying(){
     chmod +x ~/.config/bspwm/bin/*
     chmod +x ~/.config/bspwm/polybar/scripts/*
     
-    echo " "
     echo && echo -en "Press Enter To Continue"
     read input      
-    
-	clear
-
 }
-    
-if [ -d ~/.config  ]
+
+
+if [ -d ~/.config  ]; then
 
     mkdir -p ~/.config/
     filecopying
@@ -268,9 +262,7 @@ else
     exit
 fi
 
-
-
-#done 
+done 
 #echo "PLEASE MAKE .xinitrc TO LAUNCH, or just use your Display Manager (ie. lightdm or sddm, etc.)" 
 
 
