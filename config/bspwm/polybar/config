@@ -56,6 +56,26 @@ offset-y = 5
 
 wm-restack = bspwm
 
+[bar/lower]
+monitor   = 
+enable-ipc = true
+font-0 = "JetBrains Mono:style=Regular:size=9:antialias=true;2"
+font-1 = "Iosevka Nerd Font:size=10:antialias=true;2"
+padding = 0
+border-size = 1
+border-color = ${color.Peach}
+height = 20
+width = 100%
+radius = 0
+background = ${color.Black-2}
+foreground = ${color.White}
+override-redirect=false
+offset-x = 0%
+offset-y = 97.5%
+wm-restack = bspwm
+modules-left = workspaces 
+
+
 [bar/top-ws]
 inherit = bar/base
 width = 17% 

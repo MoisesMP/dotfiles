@@ -29,6 +29,7 @@ done
   polybar top-title -c ~/.config/bspwm/polybar/config &
   polybar top-music -c ~/.config/bspwm/polybar/config &
   polybar top-tray -c ~/.config/bspwm/polybar/config &
+  #polybar lower -c ~/.config/bspwm/polybar/config &
 
 
 

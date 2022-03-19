@@ -197,7 +197,7 @@ initial = 1
 format-prefix = ""
 format-padding = 1
 format-prefix-foreground = ${color.Red}
-click-left = st -e yay -Syu
+click-left = kitty -e yay -Syu
 tail = true
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -428,7 +428,7 @@ format-discharging = <ramp-capacity> <label-discharging>
 ;;format-discharging-background = ${color.}
 format-discharging-padding = 2
 
-format-full = <label-full>
+format-full = <label-full> <label-discharging>
 ;;format-full-background = ${color.}
 format-full-padding = 2
 
@@ -620,7 +620,7 @@ exec = ${env:P_BSPWM_WINDOW_CMD}
 format-padding = 1
 ;,format = <label>
 ;;format-background = ${color.Black-3}
-format-foreground = ${color.Lavender}
+;format-foreground = ${color.Lavender}
 
 [module/xxwindow]
 type = custom/script
