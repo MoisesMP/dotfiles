@@ -50,6 +50,17 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
 - Fonts Polybar
    - [JetBrains](https://www.jetbrains.com/es-es/lp/mono/)
    - [Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts)
+ 
+ 
+ ```sh
+   yay -S bspwm sxhkd rofi  picom-ibhagwan-git polybar pcmanfm xfce-polkit \
+           kitty ranger btop dunst ksuperkey xfce4-power-manager firefox \
+           acpi mpd mpc ncmpcpp xorg-xsetroot nitrogen networkmanager_dmenu \
+           wmctrl ranger neovim vim imagemagick libnotify xclip curl zsh  \
+           alacritty zscroll playerctl betterlockscreen neofetch lxappearance \
+           exa doas 
+```
+Can replace yay with paru
 
 ## Dotfiles install
 1. Clone this repository somewhere on your machine.
