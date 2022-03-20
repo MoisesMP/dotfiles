@@ -246,7 +246,9 @@ filecopying(){
     chmod +x ~/.config/bspwm/polybar/scripts/*
     
     #sxhkd &
-    
+    nitrogen --set-zoom-fill --save ~/.wallpaper/1959.jpg
+    betterlockscreen -u ~/.wallpaper/1959.jpg
+
     echo && echo -en "Press Enter To Continue"
     read input      
 }
@@ -274,8 +276,6 @@ sxhkd(){
 
     fi
 }
-
-sxhkd
 
 done 
 #echo "PLEASE MAKE .xinitrc TO LAUNCH, or just use your Display Manager (ie. lightdm or sddm, etc.)" 
