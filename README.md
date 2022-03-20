@@ -53,10 +53,10 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
  
  
  ```sh
-   yay -S bspwm sxhkd rofi  picom-ibhagwan-git polybar pcmanfm xfce-polkit \
+   yay -S bspwm sxhkd rofi picom-ibhagwan-git polybar pcmanfm xfce-polkit \
            kitty ranger btop dunst ksuperkey xfce4-power-manager firefox \
            acpi mpd mpc ncmpcpp xorg-xsetroot nitrogen networkmanager_dmenu \
-           wmctrl ranger neovim vim imagemagick libnotify xclip curl zsh  \
+           wmctrl checkupdates-aur neovim vim imagemagick libnotify xclip curl zsh  \
            alacritty zscroll playerctl betterlockscreen neofetch lxappearance \
            exa doas 
 ```
