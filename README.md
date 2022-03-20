@@ -58,7 +58,7 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
            acpi mpd mpc ncmpcpp xorg-xsetroot nitrogen networkmanager_dmenu \
            wmctrl checkupdates-systemd-git neovim vim imagemagick libnotify xclip curl zsh  \
            alacritty zscroll playerctl betterlockscreen neofetch lxappearance \
-           exa doas ueberzug w3m
+           exa doas ueberzug w3m xfce4-settings
 ```
 Can replace yay with paru
 
