@@ -36,7 +36,7 @@ super + n
 
 # Launch Apps
 super + {e,w}
-	{pcmanfm,google-chrome}
+	{pcmanfm,firefox}
 
 # Terminal Apps
 ctrl + alt + {v,n,r,h,b}
