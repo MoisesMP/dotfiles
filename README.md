@@ -13,11 +13,11 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
 |  Flamingo |  Mauve |
 |---------------------------|-------------------------|
 | ![Flamingo](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Flamingo.png) | ![Mauve](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Mauve.png) |
-|  Pink |  Maroon |
+|  Pink |   Maroon |
 | ![Flamingo](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Pink.png) | ![Mauve](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Maroon.png) |
-|  Red |  Peach |
+|  Red | Peach |
 | ![Flamingo](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Red.png) | ![Mauve](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Peach.png) |
-|  Yellow |  Green |
+|  Yellow | Green |
 
 
 ## Packages
