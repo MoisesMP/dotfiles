@@ -1,0 +1,125 @@
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;;
+;;	    ____        __      __              
+;;	   / __ \____  / /_  __/ /_  ____ ______
+;;	  / /_/ / __ \/ / / / / __ \/ __ `/ ___/
+;;	 / ____/ /_/ / / /_/ / /_/ / /_/ / /    
+;;	/_/    \____/_/\__, /_.___/\__,_/_/     
+;;	              /____/                    
+;;
+;; Created By Moises
+;;
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+[global/wm]
+margin-bottom = 0
+margin-top = 0
+
+include-file = ~/.config/bspwm/polybar/bin/colors
+include-file = ~/.config/bspwm/polybar/bin/modules
+
+;  _                    
+; | |__   __ _ _ __ ___ 
+; | '_ \ / _` | '__/ __|
+; | |_) | (_| | |  \__ \
+; |_.__/ \__,_|_|  |___/
+
+
+[bar/base]
+monitor   = 
+;${env:MONITOR}
+enable-ipc = true
+font-0 = "JetBrains Mono:style=Regular:size=9:antialias=true;2"
+font-1 = "Iosevka Nerd Font:size=10:antialias=true;2"
+
+padding = 0
+border-size = 2
+border-color = ${color.Background-A}
+
+height = 30
+radius = 0
+;Works very well with a radius like this! Put it on every bar.
+
+background = ${color.Background}
+foreground = ${color.Foreground}
+;${color.Lavender}
+; ${color.White}
+override-redirect=false
+offset-y = 5
+;radius = 0
+
+wm-restack = bspwm
+
+
+[bar/top-ws]
+inherit = bar/base
+width = 15% 
+;22.0%
+
+offset-x = 1%
+line-size = 2
+
+; Options available for the workspaces module
+; bspwm
+; workspaces
+modules-center = workspaces 
+
+
+[bar/top-title]
+inherit = bar/base
+width = 23%
+
+offset-x = 18.5%
+
+modules-left = mod windowlist
+;xxwindow
+;title
+modules-center = 
+
+[bar/top-music]
+inherit = bar/base
+enable-ipc = true
+width = 23%
+
+offset-x = 44.5%
+; Spotify (uses playerctl)
+; modules-left = previous playpause next spotify
+; Mpd
+modules-left = mpd mpd-scroll 
+
+modules-center =  
+
+[bar/top-tray]
+inherit = bar/base
+width = 29%
+
+offset-x = 70%
+
+modules-left = 
+modules-right = pkg battery backlight volume network date
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+;; Application Settings
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = true
+
+;
+
+
+;;-_-_-_-_-_-_-_-_-_-_
+;;	    __________  ______
+;;	   / ____/ __ \/ ____/
+;;	  / __/ / / / / /_    
+;;	 / /___/ /_/ / __/    
+;;	/_____/\____/_/       
+;;
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+

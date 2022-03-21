@@ -1,7 +1,0 @@
-Google-chrome 
-Firefox 
-Code 
-kitty 
-Pcmanfm 
-Thunar 
-Fallback ·

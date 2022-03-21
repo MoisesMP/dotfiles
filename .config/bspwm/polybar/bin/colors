@@ -1,0 +1,48 @@
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;;
+;;	   ______      __               
+;;	  / ____/___  / /___  __________
+;;	 / /   / __ \/ / __ \/ ___/ ___/
+;;	/ /___/ /_/ / / /_/ / /  (__  ) 
+;;	\____/\____/_/\____/_/  /____/  
+;;
+;; Created By Catppuccin 
+;; <https://github.com/catppuccin>
+;;
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+[color]
+
+    Foreground   = #D9E0EE
+    Background   = #951E1E2E
+    Foreground-A = #302D41
+    Background-A = #96CDFB
+
+;; Morning
+
+    Flamingo    = #F2CDCD
+    Mauve       = #DDB6F2
+    Pink        = #F5C2E7
+    Maroon      = #E8A2AF
+    Red         = #F28FAD
+    Peach       = #F8BD96
+    Yellow      = #FAE3B0
+    Green       = #ABE9B3
+    Teal        = #B5E8E0
+    Blue        = #96CDFB
+    Sky         = #89DCEB
+
+;; Night
+
+	Black-0     = #161320
+    Black-1     = #1A1826
+    Black-2     = #1E1E2E
+    Black-3     = #302D41
+    Black-4     = #575268
+    Gray-0      = #6E6C7E
+    Gray-1      = #988BA2
+    Gray-2      = #C3BAC6
+    White       = #D9E0EE
+    Lavender    = #C9CBFF
+    Rosewater   = #F5E0DC

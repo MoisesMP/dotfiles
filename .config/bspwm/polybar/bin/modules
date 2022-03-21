@@ -1,0 +1,404 @@
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;;
+;;	    __  ___          __      __         
+;;	   /  |/  /___  ____/ /_  __/ /__  _____
+;;	  / /|_/ / __ \/ __  / / / / / _ \/ ___/
+;;	 / /  / / /_/ / /_/ / /_/ / /  __(__  ) 
+;;	/_/  /_/\____/\__,_/\__,_/_/\___/____/  
+;;
+;; Created By Moises
+;; <https://github.com/MoisesMP>
+;;
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/volume]
+type = internal/alsa
+format-volume = <ramp-volume> <label-volume>
+format-volume-padding = 2
+label-volume = %percentage%%
+label-muted = "婢"
+label-muted-foreground = ${color.Gray-1}
+label-muted-padding = 2
+interval = 5
+click-left = pavucontrol
+
+ramp-volume-0 = 奄
+ramp-volume-1 = 奄
+ramp-volume-2 = 奔
+ramp-volume-3 = 奔
+ramp-volume-4 = 墳
+ramp-volume-5 = 墳
+ramp-volume-6 = 墳
+ramp-volume-0-foreground = ${color.Teal}
+ramp-volume-1-foreground = ${color.Blue}
+ramp-volume-2-foreground = ${color.Blue}
+ramp-volume-3-foreground = ${color.Green}
+ramp-volume-4-foreground = ${color.Green}
+ramp-volume-5-foreground = ${color.Maroon}
+ramp-volume-6-foreground = ${color.Red}
+	
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/backlight]
+type = internal/xbacklight
+
+interval = 1
+card = intel_backlight
+format = <ramp> <label>
+label = %percentage%%
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-0-foreground = ${color.Gray-1}
+ramp-1-foreground = ${color.Teal}
+ramp-2-foreground = ${color.Blue}
+ramp-3-foreground = ${color.Green}
+ramp-4-foreground = ${color.Maroon}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/date]
+type = internal/date
+
+interval = 1.0
+
+date = %A, %d %B
+
+time = %I:%M %p
+
+;date-alt = It's %A, %d %B %Y
+;;time-alt = at %k:%M:%S
+
+format = <label>
+format-background = ${color.Background-A}
+format-foreground = ${color.Foreground-A}
+format-padding = 1 
+
+label = " %time%"
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/network]
+type = internal/network
+interface = wlp2s0
+
+interval = 1
+
+accumulate-stats = true
+
+unknown-as-up = true
+
+format-connected = "<ramp-signal> <label-connected> "
+
+format-disconnected = <label-disconnected>
+format-disconnected-prefix = " "
+format-disconnected-prefix-foreground = ${color.Gray-1}
+format-padding = 1
+#ramp-signal-padding = 1
+label-connected = "%{A1:networkmanager_dmenu &:}%downspeed%%{A}"
+# essid%%{A}"
+
+label-disconnected = "%{A1:networkmanager_dmenu &:} Offline%{A} "
+
+ramp-signal-0 = " "
+ramp-signal-1 = " "
+ramp-signal-2 = " "
+ramp-signal-3 = " "
+ramp-signal-4 = " "
+ramp-signal-5 = " "
+ramp-signal-0-foreground = ${color.Gray-1}
+ramp-signal-1-foreground = ${color.Teal}
+ramp-signal-2-foreground = ${color.Blue}
+ramp-signal-3-foreground = ${color.Blue}
+ramp-signal-4-foreground = ${color.Green}
+ramp-signal-5-foreground = ${color.Green}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/pkg]
+type = custom/script
+exec = ~/.config/bspwm/polybar/scripts/updates.sh
+interval = 7200
+initial = 1
+format-prefix = " "
+format-padding = 1
+format-prefix-foreground = ${color.Red}
+click-left = kitty -e yay -Syu
+tail = true
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/workspaces]
+
+type = internal/bspwm
+label-focused = " "
+;""
+;""
+label-focused-foreground = ${color.Background-A}
+label-occupied = ${self.label-focused}
+label-occupied-foreground = ${color.White}
+label-urgent = ${self.label-focused}
+label-urgent-foreground = ${color.Red}
+label-empty = ${self.label-focused}
+label-empty-foreground = ${color.Gray-0}
+label-separator = " "
+; "∙"
+;label-separator-padding = 0
+;label-separator-foreground = ${color.Red}
+; vim:ft=dosini
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/mod]
+type = internal/bspwm
+
+format = <label-mode>
+format-background = ${color.Background-A}
+format-foreground = ${color.Foreground-A}
+format-padding = 1
+
+label-monocle = "Monocle"
+label-tiled = "Tiled"
+
+label-floating = ", Float"
+label-pseudotiled = ", Pseudo"
+label-fullscreen = ", Full"
+
+label-locked = " Locked"
+label-sticky = " Sticky"
+label-private = " Private"
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/title]
+type = internal/xwindow
+format-padding = 1
+label = "[ %title:0:17:...% ]"
+label-maxlen = 30
+;label-foreground = ${color.Lavender}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/battery]
+type = internal/battery
+
+full-at = 99
+low-at = 15
+
+battery = BAT1
+adapter = ACAD
+
+poll-interval = 2
+time-format = %H:%M
+
+format-charging = <animation-charging> <label-charging>
+;;format-charging-background = ${color.}
+format-charging-padding = 2
+
+format-discharging = <ramp-capacity> <label-discharging>
+;;format-discharging-background = ${color.}
+format-discharging-padding = 2
+
+format-full = <label-full> <label-discharging>
+;;format-full-background = ${color.}
+format-full-padding = 2
+
+format-low = <label-low> <label-discharging>
+;;format-low-background = ${color.}
+format-low-padding = 2
+
+label-charging = %percentage%%
+
+label-discharging = %percentage%%
+
+label-full = 
+label-full-foreground = ${color.Green} 
+
+lebel-low = 
+label-low-foreground = ${color.Red} 
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+ramp-capacity-0-foreground = ${color.Red}
+ramp-capacity-1-foreground = ${color.Red}
+ramp-capacity-2-foreground = ${color.Peach}
+ramp-capacity-3-foreground = ${color.Peach}
+ramp-capacity-4-foreground = ${color.Teal}
+ramp-capacity-5-foreground = ${color.Blue}
+ramp-capacity-6-foreground = ${color.Blue}
+ramp-capacity-7-foreground = ${color.Sky}
+ramp-capacity-8-foreground = ${color.Sky}
+ramp-capacity-9-foreground = ${color.Green}
+
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-5 = 
+animation-charging-6 = 
+animation-charging-0-foreground = ${color.Red}
+animation-charging-1-foreground = ${color.Peach}
+animation-charging-2-foreground = ${clolor.Yellow}
+animation-charging-3-foreground = ${color.Teal}
+animation-charging-4-foreground = ${color.Blue}
+animation-charging-5-foreground = ${color.Sky}
+animation-charging-6-foreground = ${color.Green}
+
+animation-charging-framerate = 750
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/mpd]
+type = internal/mpd
+
+interval = 2
+
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next>
+format-online-padding = 1
+format-online-background = ${color.Background-A}
+format-online-foreground = ${color.Foreground-A}
+
+label-song =  "%artist% - %title%"
+label-song-maxlen = 30
+label-song-ellipsis = true
+
+label-offline = "MPD is offline"
+
+; Only applies if <icon-X> is used
+icon-play = 契
+icon-pause = 
+icon-stop = 栗
+icon-prev = 玲
+icon-next = 怜
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/mpd-scroll]
+type = custom/script
+interval = 1
+tail = true
+;;format = <label>
+label-padding = 1
+exec = ~/.config/bspwm/polybar/scripts/mpd
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/music]
+type = custom/script
+interval = 1
+tail = true
+; Only applies if <icon-X> is used
+label-song = 
+
+label =  %output% 
+exec = ~/.config/bspwm/polybar/scripts/scroll_status.sh
+click-left = playerctl previous
+click-center = playerctl play-pause
+click-right = playerctl next
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/music-prev]
+type = custom/script
+interval = 1
+format = <label>
+label = 玲
+exec = ~/.config/bspwm/polybar/scripts/music
+exec-if = "pgrep spotify"
+click-left = playerctl previous
+
+[module/music-play-pause]
+type = custom/script
+interval = 1
+format = <label>
+label = 契
+exec = ~/.config/bspwm/polybar/scripts/music
+exec-if = "pgrep spotify"
+click-left = playerctl play-pause
+
+[module/music-next]
+type = custom/script
+interval = 1
+format = <label>
+label = 怜
+;exec = echo "next-song-symbol"
+exec = ~/.config/bspwm/polybar/scripts/music
+exec-if = "pgrep spotify"
+click-left = playerctl next
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;Spotify modules
+
+[module/previous]
+type = custom/script
+exec = echo "  "
+exec-if = "pgrep spotify"
+format-background = ${color.Peach}
+format-foreground = ${color.Black-3}
+tail = true
+interval = 1
+click-left = playerctl previous -p spotify
+
+
+[module/next]
+type = custom/script
+exec = echo "  "
+exec-if = "pgrep spotify"
+format-background = ${color.Peach}
+format-foreground = ${color.Black-3}
+tail = true
+interval = 1
+click-left = playerctl next -p spotify
+
+[module/playpause]
+type = custom/script
+exec = echo ""
+exec-if = "pgrep spotify"
+format-background = ${color.Peach}
+format-foreground = ${color.Black-3}
+tail = true
+interval = 1
+click-left = "playerctl -p spotify play-pause"
+
+
+[module/spotify]
+type = custom/script
+exec = ~/.config/bspwm/polybar/scripts/scroll_status.sh
+exec-if = "pgrep spotify"
+format-padding = 1
+tail = true
+interval = 1
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/windowlist]
+type = custom/script
+tail = true
+exec = ${env:P_BSPWM_WINDOW_CMD} 
+;home/m0d/.config/bspwm/bspwm_window_titles.sh
+;interval = 0
+format-padding = 1
+;,format = <label>
+;;format-background = ${color.Black-3}
+;format-foreground = ${color.Lavender}
+
+[module/xxwindow]
+type = custom/script
+;tail = true
+interval = 1
+exec = ~/.config/bspwm/polybar/scripts/xxwindow.sh

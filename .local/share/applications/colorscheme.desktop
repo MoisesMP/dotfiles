@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Color Scheme Changer
+Comment=Color Scheme 
+Exec=bash -c "${HOME}/.config/bspwm/bin/color"
+Icon=firmware-manager
+Terminal=false
+Type=Application
+Categories=System

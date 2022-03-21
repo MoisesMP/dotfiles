@@ -1,0 +1,141 @@
+#!/bin/bash
+set -e
+
+Flamingo(){
+    cp -r ~/.config/bspwm/Colors/Flamingo/* ~/.config/bspwm/
+    sleep 0.1
+    echo -en "Finished..."
+    sleep 1
+    bspc wm -r
+    exit
+}
+
+Mauve(){
+    cp -r ~/.config/bspwm/Colors/Mauve/* ~/.config/bspwm/
+    sleep 0.1
+    echo -en "Finished..."
+    sleep 1
+    bspc wm -r
+    exit
+}
+
+Pink(){
+    cp -r ~/.config/bspwm/Colors/Pink/* ~/.config/bspwm/
+    sleep 0.1
+    echo -en "Finished..."
+    sleep 1
+    bspc wm -r
+    exit
+}
+
+Maroon(){
+    cp -r ~/.config/bspwm/Colors/Maroon/* ~/.config/bspwm/
+    sleep 0.1
+    echo -en "Finished..."
+    sleep 1
+    bspc wm -r
+    exit
+}
+
+Red(){
+    cp -r ~/.config/bspwm/Colors/Red/* ~/.config/bspwm/
+    sleep 0.1
+    echo -en "Finished..."
+    sleep 1
+    bspc wm -r
+    exit
+}
+
+Peach(){
+    cp -r ~/.config/bspwm/Colors/Peach/* ~/.config/bspwm/
+    sleep 0.1
+    echo -en "Finished..."
+    sleep 1
+    bspc wm -r
+    exit
+}
+
+Yellow(){
+    cp -r ~/.config/bspwm/Colors/Yellow/* ~/.config/bspwm/
+    sleep 0.1
+    echo -en "Finished..."
+    sleep 1
+    bspc wm -r
+    exit
+}
+
+Green(){
+    cp -r ~/.config/bspwm/Colors/Green/* ~/.config/bspwm/
+    sleep 0.1
+    echo -en "Finished..."
+    sleep 1
+    bspc wm -r
+    exit
+}
+
+Teal(){
+    cp -r ~/.config/bspwm/Colors/Teal/* ~/.config/bspwm/
+    sleep 0.1
+    echo -en "Finished..."
+    sleep 1
+    bspc wm -r
+    exit
+}
+
+Blue(){
+    cp -r ~/.config/bspwm/Colors/Blue/* ~/.config/bspwm/
+    sleep 0.1
+    echo -en "Finished..."
+    sleep 1
+    bspc wm -r
+    exit
+}
+
+Sky(){
+    cp -r ~/.config/bspwm/Colors/Sky/* ~/.config/bspwm/
+    sleep 0.1
+    echo -en "Finished..."
+    sleep 1
+    bspc wm -r
+    exit
+}
+
+menu(){
+sleep 0.1
+echo "Color scheme change"
+sleep 0.1
+echo -e "
+                1) Flamingo
+                2) Mauve
+                3) Pink
+                4) Maroon
+                5) Red
+                6) Peach
+                7) Yellow
+                8) Green
+                9) Teal
+                10) Blue
+                11) Sky
+                
+                q)    Cancel"
+echo
+echo -en "Choose An Option: "
+	read option
+	case $option in
+		1) Flamingo ;;
+		2) Mauve ;;
+		3) Pink ;;
+        4) Maroon ;;
+        5) Red ;;
+        6) Peach ;;
+        7) Yellow ;;
+        8) Green ;;
+        9) Teal ;;
+        10) Blue ;;
+        11) Sky ;;
+        q) exit ;;
+        *) echo " \"$option\" Is Not A Valid Option"; sleep 1; menu ;;
+	esac
+}
+
+menu
