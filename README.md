@@ -1,13 +1,6 @@
 # Dotfiles
 My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
 
-## Installation
-* [Preview](#screenshots)
-* [Packages](#packages)
-* [Dotfiles](#dotfiles-install)
-* [User's configuration](#userconfiguration)
-
-
 ## Screenshots 
 ### Desktop
 |  |  |
@@ -81,7 +74,13 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
 ```
 Can replace yay with paru
 
-## Dotfiles install
+## Creation of necessary symbolic links
+```sh
+   sudo ln -s ~/.config/bspwm/bspwm_window_titles.sh /usr/bin/bspwm_window_title
+```
+```sh
+   sudo ln -s ~/.config/bspwm/bin/music /usr/bin/music
+```
 
 ## User's configuration
 **Network Module**
