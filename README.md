@@ -53,31 +53,16 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
  
  
  ```sh
-   yay -S bspwm sxhkd rofi picom-ibhagwan-git polybar pcmanfm xfce-polkit \
-           kitty ranger btop dunst ksuperkey xfce4-power-manager firefox \
-           acpi mpd mpc ncmpcpp xorg-xsetroot nitrogen networkmanager_dmenu \
-           wmctrl checkupdates-systemd-git neovim vim imagemagick libnotify xclip curl zsh  \
-           alacritty zscroll playerctl betterlockscreen neofetch lxappearance \
-           exa doas ueberzug w3m xfce4-settings ttf-iosevka-nerd
+   yay -S bspwm sxhkd rofi picom-ibhagwan-git polybar pcmanfm xfce-polkit 				  \
+          kitty ranger btop dunst ksuperkey xfce4-power-manager firefox 				  \
+          acpi mpd mpc ncmpcpp xorg-xsetroot nitrogen networkmanager_dmenu				\
+          wmctrl checkupdates-systemd-git neovim vim imagemagick libnotify xclip 	\
+          alacritty zscroll playerctl betterlockscreen neofetch lxappearance 			\
+          exa doas ueberzug w3m xfce4-settings ttf-iosevka-nerd curl zsh cava
 ```
 Can replace yay with paru
 
 ## Dotfiles install
-1. Clone this repository somewhere on your machine.
-```sh
-   git clone https://github.com/MoisesMP/dotfiles.git
-```
-2. Go to dotfiles dir
-```sh
-   cd dotfiles
-```
-3. Run installation script
-```sh
-   chmod +x install.sh
-```
-```sh
-   ./install.sh
-```
 
 ## User's configuration
 **Network Module**
