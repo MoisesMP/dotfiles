@@ -14,10 +14,20 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
 |---------------------------|-------------------------|
 | ![Flamingo](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Flamingo.png) | ![Mauve](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Mauve.png) |
 |  Pink |   Maroon |
+|---------------------------|-------------------------|
 | ![Flamingo](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Pink.png) | ![Mauve](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Maroon.png) |
 |  Red | Peach |
+|---------------------------|-------------------------|
 | ![Flamingo](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Red.png) | ![Mauve](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Peach.png) |
 |  Yellow | Green |
+|---------------------------|-------------------------|
+| ![Flamingo](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Yellow.png) | ![Mauve](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Green.png) |
+|  Teal | Blue |
+|---------------------------|-------------------------|
+| ![Flamingo](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Teal.png) | ![Mauve](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Blue.png) |
+|  Sky |  |
+|---------------------------|-------------------------|
+| ![Flamingo](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Sky.png) |  |
 
 
 ## Packages
