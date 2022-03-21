@@ -12,7 +12,7 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
 
 |         Flamingo          |          Mauve          |
 |---------------------------|-------------------------|
-| ![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Flamingo.png) | ![Desktop Screenshots (https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Mauve.png) |
+| ![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Flamingo.png) | ![Desktop Screenshots] (https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Mauve.png) |
 
 
 ## Packages
