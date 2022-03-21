@@ -16,6 +16,11 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
 ![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/wallpaperset.png)
 ![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/cava.png)
 
+|         Flamingo          |          Mauve          |
+|---------------------------|-------------------------|
+| ![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Fñamingo.png) | |
+
+
 ## Packages
 - Window Manager: [BSPWM](https://github.com/baskerville/bspwm) 
 - GTK Theme: [Catppuccin for GTK](https://github.com/catppuccin/gtk)
