@@ -46,8 +46,8 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
 - Bar: [Polybar](https://github.com/polybar/polybar) 
 - Launcher: [rofi](https://github.com/davatorium/rofi)
 - Notifications: [dunst](https://dunst-project.org/)
-- Web Browser: Google Chrome / Firefox
-  - userChrome: [Blurredfox](https://github.com/manilarome/blurredfox)  
+- Web Browser: Firefox
+  - userChrome: [GentleFox](https://github.com/alfarexguy2019/gentlefox)  
 - File Manager: [Pcmanfm](https://wiki.lxde.org/en/PCManFM) 
 - Settings Manager: [LXAppearance](https://wiki.lxde.org/en/LXAppearance)/kvantum
 - Lockscreen: [betterlockscreen](https://github.com/betterlockscreen/betterlockscreen) 
