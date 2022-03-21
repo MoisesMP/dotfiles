@@ -25,6 +25,15 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
 |Sky|  |
 | ![Sky](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Sky.png) |  |
 
+### Others
+|  |  |
+|-|-|
+|Neofetch|Ncmpcpp|
+| ![Neofetch](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Neofetch.png) | ![Ncmpcpp](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Ncmpcpp.png) |
+|Cava|Wallpaper Set|
+| ![Cava](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Cava.png) | ![Wallpaper](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Wallpaper.png) |
+|Color Scheme Changer| |
+| ![Color](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Color.png) |  |
 
 ## Packages
 - Window Manager: [BSPWM](https://github.com/baskerville/bspwm) 
