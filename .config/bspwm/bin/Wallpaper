@@ -31,7 +31,7 @@ case ${1} in
             eval "IMG=\$image${NUM}"
             nitrogen --set-zoom-fill --save "$IMG" &>/dev/null || exit 1
             betterlockscreen -u "$IMG" &>/dev/null || exit 1
-            cp "$IMG" /usr/share/wall/lightdm
+            #cp "$IMG" /usr/share/wall/lightdm
             SELECTED="$(grep -oE '[^/]+$' <<< "$IMG")"
             printf "${C}[${GB}√${NC}${C}] ${W}Selected wallpaper: ${Green}${SELECTED}\n"
         fi
