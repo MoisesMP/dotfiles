@@ -9,16 +9,10 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
 
 
 ## Screenshots 
-![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/desktop.png)
-![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/neofetch.png)
-![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/neovim.png)
-![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/ncmpcpp.png)
-![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/wallpaperset.png)
-![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/cava.png)
 
 |         Flamingo          |          Mauve          |
 |---------------------------|-------------------------|
-| ![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Fñamingo.png) | |
+| ![Desktop Screenshots](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Flamingo.png) | ![Desktop Screenshots (https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Mauve.png) |
 
 
 ## Packages
