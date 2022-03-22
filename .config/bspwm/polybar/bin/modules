@@ -177,9 +177,8 @@ label-private = " Private"
 [module/title]
 type = internal/xwindow
 format-padding = 1
-label = "[ %title:0:17:...% ]"
-label-maxlen = 30
-;label-foreground = ${color.Lavender}
+label = "[ %title:0:38:...% ]"
+label-maxlen = 39
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
