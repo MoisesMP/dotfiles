@@ -72,7 +72,8 @@ width = 23%
 
 offset-x = 18.5%
 
-modules-left = mod windowlist
+modules-left = mod title
+;;windowlist
 ;xxwindow
 ;title
 modules-center = 
