@@ -111,8 +111,8 @@ alias l.='exa -a | egrep "^\."'
 
 # pacman and paru
 alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs
-alias yaysua='paru -Sua --noconfirm'              # update only AUR pkgs (paru)
-alias yaysyu='paru -Syu --noconfirm'              # update standard pkgs and AUR pkgs (paru)
+alias parusua='paru -Sua --noconfirm'            # update only AUR pkgs (paru)
+alias parusyu='paru -Syu --noconfirm'            # update standard pkgs and AUR pkgs (paru)
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 alias cleanup='sudo pacman -Rns (pacman -Qtdq)'  # remove orphaned packages
 
