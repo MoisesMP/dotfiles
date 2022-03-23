@@ -88,7 +88,7 @@ source $ZSH/oh-my-zsh.sh
 alias c='clear'
 
 # root privileges
-alias doas="doas --"
+# alias doas="doas --"
 
 # navigation
 alias ..='cd ..'
