@@ -92,7 +92,7 @@ If you have an error with the wifi module, change the network interface to
   ...
    [module/network]
    type = internal/network
-   interface = wlan0
+   interface = wlp2s0
   ...
  ```
 
