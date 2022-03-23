@@ -23,9 +23,9 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
 |-|-|
 |Neofetch|Ncmpcpp|
 | ![Neofetch](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Neofetch.png) | ![Ncmpcpp](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Ncmpcpp.png) |
-|Cava|Wallpaper Set|
+|Cava|Wallpaper|
 | ![Cava](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Cava.png) | ![Wallpaper](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Wallpaper.png) |
-|Color Scheme Changer| |
+|Color Scheme| |
 | ![Color](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Color.png) |  |
 
 ## Packages
@@ -47,7 +47,7 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
 - Launcher: [rofi](https://github.com/davatorium/rofi)
 - Notifications: [dunst](https://dunst-project.org/)
 - Web Browser: Firefox
-  - userChrome: [GentleFox](https://github.com/alfarexguy2019/gentlefox)  
+  - userChrome: [Simplify Darkish](https://github.com/CristianDragos/FirefoxThemes)  
 - File Manager: [Pcmanfm](https://wiki.lxde.org/en/PCManFM) 
 - Settings Manager: [LXAppearance](https://wiki.lxde.org/en/LXAppearance)/kvantum
 - Lockscreen: [betterlockscreen](https://github.com/betterlockscreen/betterlockscreen) 
