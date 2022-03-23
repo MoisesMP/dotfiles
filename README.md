@@ -39,7 +39,7 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
    - Music Player: [ncmpcpp](https://rybczak.net/ncmpcpp/) 
    - Task Manager: [btop](https://github.com/aristocratos/btop) 
    - Fetch: [neofetch](https://github.com/dylanaraps/neofetch) 
-   - AUR Helper: [yay](https://github.com/Jguer/yay) 
+   - AUR Helper: [paru](https://github.com/Morganamilo/paru) 
    - Shell: [Zsh](https://www.zsh.org/)   
 - Colorscheme: [Catppuccin](https://github.com/catppuccin/catppuccin) 
 - Compositor: [Picom (ibhagwan)](https://github.com/ibhagwan/picom) 
@@ -65,14 +65,14 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
  
  
  ```sh
-   yay -S bspwm sxhkd rofi picom-ibhagwan-git polybar pcmanfm xfce-polkit        \
+   paru -S bspwm sxhkd rofi picom-ibhagwan-git polybar pcmanfm xfce-polkit        \
           kitty ranger btop dunst ksuperkey xfce4-power-manager firefox          \
           acpi mpd mpc ncmpcpp xorg-xsetroot nitrogen networkmanager-dmenu-git   \
           wmctrl checkupdates-systemd-git neovim vim imagemagick libnotify xclip \
           alacritty zscroll playerctl betterlockscreen neofetch lxappearance     \
           exa doas ueberzug w3m xfce4-settings ttf-iosevka-nerd curl zsh cava
 ```
-Can replace yay with paru
+Can replace paru with yay
 
 ## Creation of necessary symbolic links
 ```sh
