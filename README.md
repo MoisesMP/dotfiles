@@ -70,7 +70,7 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
           acpi mpd mpc ncmpcpp xorg-xsetroot nitrogen networkmanager-dmenu-git   \
           wmctrl checkupdates-systemd-git neovim vim imagemagick libnotify xclip \
           alacritty zscroll playerctl betterlockscreen neofetch lxappearance     \
-          exa doas ueberzug w3m xfce4-settings ttf-iosevka-nerd curl zsh cava
+          exa ueberzug w3m xfce4-settings ttf-iosevka-nerd curl zsh cava
 ```
 Can replace paru with yay
 
