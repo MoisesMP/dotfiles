@@ -1,12 +1,11 @@
-#!/usr/bin/env sh
-
-## Add this to your wm startup file.
+#!/usr/bin/env bash
 
 # Terminate already running bar instances
-killall -q polybar
+# If all your bars have ipc enabled, you can use 
+polybar-msg cmd quit
+# Otherwise you can use the nuclear option:
+# killall -q polybar
 
-# Wait until the processes have been shut down
-while pgrep -u $UID -x polybar >/dev/null; do sleep 0.1; done
 
 CPID=$(pgrep -x polybar)
 
@@ -24,13 +23,14 @@ for m in $( bspc query -M --names ); do
     #MONITOR=$m polybar -c ~/.config/bspwm/polybar/config --reload top-tray &
 done
 
-# Launch bar1, bar2 and bar3
-  polybar top-ws -c ~/.config/bspwm/polybar/config &  
-  polybar top-title -c ~/.config/bspwm/polybar/config &
-  polybar top-music -c ~/.config/bspwm/polybar/config &
-  polybar top-tray -c ~/.config/bspwm/polybar/config &
-  #polybar lower -c ~/.config/bspwm/polybar/config &
+# Launch bar1 and bar2
+echo "---" | tee -a /tmp/polybar1.log /tmp/polybar2.log /tmp/polybar3.log /tmp/polybar4.log
+polybar -c ~/.config/bspwm/polybar/config top-ws 2>&1 | tee -a /tmp/polybar1.log & disown
+polybar -c ~/.config/bspwm/polybar/config top-title 2>&1 | tee -a /tmp/polybar2.log & disown
+polybar -c ~/.config/bspwm/polybar/config top-music 2>&1 | tee -a /tmp/polybar3.log & disown
+polybar -c ~/.config/bspwm/polybar/config top-tray 2>&1 | tee -a /tmp/polybar4.log & disown
 
+echo "Bars launched..."
 
 
 

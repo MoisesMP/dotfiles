@@ -27,9 +27,6 @@ include-file = ~/.config/bspwm/polybar/bin/modules
 
 
 [bar/base]
-monitor   = 
-;${env:MONITOR}
-enable-ipc = true
 font-0 = "JetBrains Mono:style=Regular:size=9:antialias=true;2"
 font-1 = "Iosevka Nerd Font:size=10:antialias=true;2"
 
@@ -38,16 +35,13 @@ border-size = 2
 border-color = ${color.Background-A}
 
 height = 30
-radius = 0
+;radius = 10
 ;Works very well with a radius like this! Put it on every bar.
 
 background = ${color.Background}
 foreground = ${color.Foreground}
-;${color.Lavender}
-; ${color.White}
-override-redirect=false
+override-redirect=true
 offset-y = 5
-;radius = 0
 
 wm-restack = bspwm
 
@@ -76,11 +70,9 @@ modules-left = mod title
 ;;windowlist
 ;xxwindow
 ;title
-modules-center = 
 
 [bar/top-music]
 inherit = bar/base
-enable-ipc = true
 width = 23%
 
 offset-x = 44.5%
@@ -89,15 +81,12 @@ offset-x = 44.5%
 ; Mpd
 modules-left = mpd mpd-scroll 
 
-modules-center =  
-
 [bar/top-tray]
 inherit = bar/base
 width = 29%
 
 offset-x = 70%
 
-modules-left = 
 modules-right = pkg battery backlight volume network date
 
 
@@ -105,12 +94,28 @@ modules-right = pkg battery backlight volume network date
 
 ;; Application Settings
 [settings]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = true
+
+;throttle-output = 5
+;throttle-output-for = 10
+
+;throttle-input-for = 30
+screenchange-reload = false
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+;format-foreground = 
+;format-background = 
+;format-underline =
+;format-overline =
+;format-spacing =
+;format-padding =
+;format-margin =
+;format-offset =
+
+pseudo-transparency = false
 
 ;
 
