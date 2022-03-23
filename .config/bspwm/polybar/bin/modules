@@ -129,7 +129,7 @@ format-prefix = " "
 format-padding = 1
 format-prefix-foreground = ${color.Background-A}
 ;format-prefix-foreground = ${color.Red}
-click-left = kitty -e yay -Syu
+click-left = kitty -e paru -Syu
 tail = true
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
