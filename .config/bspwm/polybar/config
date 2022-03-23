@@ -40,7 +40,7 @@ height = 30
 
 background = ${color.Background}
 foreground = ${color.Foreground}
-override-redirect=true
+override-redirect = false
 offset-y = 5
 
 wm-restack = bspwm
