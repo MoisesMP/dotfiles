@@ -76,10 +76,10 @@ Can replace yay with paru
 
 ## Creation of necessary symbolic links
 ```sh
-   sudo ln -s ~/.config/bspwm/bspwm_window_titles.sh /usr/bin/bspwm_window_title
+   sudo ln -s ~/.config/bspwm/bspwm_window_titles.sh /usr/local/bin/bspwm_window_title
 ```
 ```sh
-   sudo ln -s ~/.config/bspwm/bin/music /usr/bin/music
+   sudo ln -s ~/.config/bspwm/bin/music /usr/local/bin/music
 ```
 
 ## User's configuration
