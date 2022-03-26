@@ -74,10 +74,18 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
 ```
 Can replace paru with yay
 
+### Mpd notification
+
+- [mpd notification](https://github.com/eworm-de/mpd-notification)
+
+
 ## Creation of necessary symbolic links
 ```sh
    sudo ln -s ~/.config/bspwm/bspwm_window_titles.sh /usr/local/bin/bspwm_window_title
 ```
+ - no longer required 
+
+
 ```sh
    sudo ln -s ~/.config/bspwm/bin/music /usr/local/bin/music
 ```
