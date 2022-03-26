@@ -99,12 +99,12 @@ modules-right = pkg battery backlight volume network date
 ;throttle-output-for = 10
 
 ;throttle-input-for = 30
-screenchange-reload = false
-compositing-background = source
-compositing-foreground = over
-compositing-overline = over
-compositing-underline = over
-compositing-border = over
+;screenchange-reload = false
+;compositing-background = source
+;compositing-foreground = over
+;compositing-overline = over
+;compositing-underline = over
+;compositing-border = over
 
 ;format-foreground = 
 ;format-background = 
@@ -115,7 +115,7 @@ compositing-border = over
 ;format-margin =
 ;format-offset =
 
-pseudo-transparency = false
+;pseudo-transparency = false
 
 ;
 

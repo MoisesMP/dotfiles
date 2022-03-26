@@ -263,7 +263,7 @@ label-discharging = %percentage%%
 label-full = 
 label-full-foreground = ${color.Background-A} 
 
-lebel-low = 
+label-low = 
 label-low-foreground = ${color.Background-A} 
 
 ramp-capacity-0 = 

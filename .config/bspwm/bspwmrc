@@ -9,7 +9,7 @@ xrdb ~/.Xresources
 bspc monitor -d 'I' 'II' 'III' 'IV' 'V' 'VI' 'VII' 'VIII'
 
 bspc config border_width         1
-bspc config window_gap           7
+bspc config window_gap           5
 bspc config normal_border_color "#6E6C7E"
 bspc config active_border_color "#F5E0DC"
 bspc config focused_border_color "#C9CBFF"
@@ -67,7 +67,7 @@ for i in ${code[@]}; do
 # 5 > office and docs
 declare -a office=(Gucharmap Atril Evince \
 libreoffice-writer libreoffice-calc libreoffice-impress \
-libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice)
+libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice DesktopEditors )
 for i in ${office[@]}; do
    bspc rule -a $i desktop='^5' follow=on focus=on; done
 
@@ -121,7 +121,7 @@ bspc rule -a '*:Kunst' sticky=on layer=below border=off focus=off
 ## Autostart -------------------------------------------------#
 
 # Kill if already running
-killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager
+killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager mpd-notification
 
 # Lauch xsettingsd daemon
 xsettingsd &
@@ -152,6 +152,7 @@ nitrogen --restore &
 
 # Start mpd
 exec mpd &
+exec mpd-notification &
 
 # Start bspwm scripts
 bspcomp
