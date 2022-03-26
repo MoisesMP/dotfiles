@@ -81,9 +81,8 @@ Can replace paru with yay
 
 ## Creation of necessary symbolic links
 ```sh
-   sudo ln -s ~/.config/bspwm/bspwm_window_titles.sh /usr/local/bin/bspwm_window_title
+   sudo ln -s ~/.config/bspwm/bspwm_window_titles.sh /usr/local/bin/bspwm_window_title  - no longer required 
 ```
- - no longer required 
 
 
 ```sh
