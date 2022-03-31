@@ -1,43 +1,38 @@
 #
-#Moises Keys
+# Moises Keys
 #
 
-# terminal emulator
-alt + Return
-	sh -c "$HOME/.bin/draw"
-
+# Terminal
 super + Return
 	  kitty
 
-# program launcher
+# Program launcher
 alt + F1
 	sh ~/.config/bspwm/bin/launcher
 
-
+# Music
 super + m
 	music
 
+# Power menu
 super + x
 	sh ~/.config/bspwm/bin/sysmenu
 
+# Network menu
 super + n 
 	networkmanager_dmenu
-
 
 ##---------- Applications ----------##
 
 # Launch Apps
 super + {e,w}
-	{pcmanfm,firefox}
+	{pcmanfm,microsoft-edge-stable}
+	
+	#firefox}
 
 # Terminal Apps
-ctrl + alt + {v,n,r,h,b}
-#--config-file ~/.config/bspwm/alacritty/alacritty.yml
-	kitty -e {vim,nvim,ranger,btop,bashtop}
-
-# Color Picker
-super + p
-	color-gpick
+ctrl + alt + {v,n,r,b}
+	kitty -e {vim,nvim,ranger,btop}
 
 # Lockscreen
 ctrl + alt + l
@@ -60,10 +55,12 @@ XF86MonBrightness{Up,Down}
 	
 # Volume control
 XF86Audio{RaiseVolume,LowerVolume}
-	amixer -D pulse sset Master {5%+,5%-} unmute
+	~/.config/bspwm/bin/volume {--up,--down}
+	#amixer -D pulse sset Master {5%+,5%-} unmute
 
 XF86AudioMute
-	amixer set Master toggle 
+	~/.config/bspwm/bin/volume --toggle
+	#amixer set Master toggle 
 
 # Music control
 XF86Audio{Next,Prev,Play,Stop}
@@ -72,31 +69,31 @@ XF86Audio{Next,Prev,Play,Stop}
 ##---------- Bspwm ----------##
 
 # quit/restart bspwm
-super + alt + {q,r}
+ctrl + shift + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
 super + {_,shift + }c
 	bspc node -{c,k}
 
-super + m
+super + q
 	bspc desktop -l next
 
 # hide current node, or restore a queried hidden node
-super + {_,shift} + minus
-	bspc node {,$(bspc query -N -d -n .hidden | head -n 1)} -g hidden
+#super + {_,shift} + minus
+#	bspc node {,$(bspc query -N -d -n .hidden | head -n 1)} -g hidden
 
 # Focused desktop window gap
-super + alt + {Up,Down}
-	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
+#super + alt + {Up,Down}
+#	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
 
 # Focused desktop window gaps scroll
-super + button{4,5}
-	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
+#super + button{4,5}
+#	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
 
 # Global window gaps scroll
-super + alt + button{4,5}
-	bspc config window_gap $(( $(bspc config window_gap) {-,+} 5 ))
+#super + alt + button{4,5}
+#	bspc config window_gap $(( $(bspc config window_gap) {-,+} 5 ))
 
 # send the newest marked node to the newest preselected node
 # super + y
@@ -164,10 +161,6 @@ super + {grave,Tab}
 # preselect
 #
 
-# preselect the direction
-super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
-
 # preselect the ratio
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
@@ -197,7 +190,3 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 
-
-################################################
-#               MEDIA KEYS                     #
-################################################

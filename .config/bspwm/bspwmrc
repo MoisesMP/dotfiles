@@ -1,15 +1,22 @@
-#! /bin/sh
+#!/bin/bash
 
 export PATH="${PATH}:$HOME/.config/bspwm/bin"
-#feh --bg-fill "$home/moises/Imágenes/Wallpapers/mech-key.jpg"
 bspc config pointer_modifier mod1
 
-xrdb ~/.Xresources
+xrdb -load $HOME/.Xresources &
 
-bspc monitor -d 'I' 'II' 'III' 'IV' 'V' 'VI' 'VII' 'VIII'
+if [[ $(xrandr -q | grep 'HDMI1 connected') ]]; then
+   randr --output eDP1 --primary --rotate normal --output HDMI1 --rotate normal --right-of eDP1
+   #xrandr --output eDP1 --primary --mode 1366x768 --rotate normal --output HDMI1 --mode 1366x768 --rotate normal --right-of eDP1
+   bspc monitor eDP1 -n Laptop -d 1 2 3 4 
+   bspc monitor HDMI1 -n External -d 5 6 7 8
+   #bspc monitor eDP1 -s HDMI1
+else
+   #bspc monitor -d 'I' 'II' 'III' 'IV' 'V' 'VI' 'VII' 'VIII'
+   bspc monitor -d 1 2 3 4 5 6 7 8 
+fi
 
-bspc config border_width         1
-bspc config window_gap           5
+bspc config border_width         0
 bspc config normal_border_color "#6E6C7E"
 bspc config active_border_color "#F5E0DC"
 bspc config focused_border_color "#C9CBFF"
@@ -18,19 +25,21 @@ bspc config presel_feedback_color "#F5E0DC"
 SPACES=$(bspc query -D)
 for SPACE in $SPACES
 do
-  bspc config -d ${SPACE} window_gap      5
-  bspc config -d ${SPACE} top_padding     10
-  bspc config -d ${SPACE} bottom_padding  10
-  bspc config -d ${SPACE} left_padding   10
-  bspc config -d ${SPACE} right_padding  10
+  bspc config -d ${SPACE} window_gap      2
+  bspc config -d ${SPACE} top_padding     5
+  bspc config -d ${SPACE} bottom_padding  3
+  bspc config -d ${SPACE} left_padding   5
+  bspc config -d ${SPACE} right_padding  5
 done
 
-bspc config automatic_scheme      spiral
-bspc config split_ratio           0.5
-bspc config borderless_monocle    true
-bspc config gapless_monocle       true
-bspc config single_monocle        false
-bspc config focus_follows_pointer  true
+bspc config automatic_scheme       alternate
+bspc config split_ratio            0.5
+
+
+#bspc config borderless_monocle    true
+#bspc config gapless_monocle       true
+#bspc config single_monocle        false
+#bspc config focus_follows_pointer  true
 
 #bspc desktop ^1 -l monocle
 #bspc desktop ^2 -l monocle
@@ -40,88 +49,94 @@ bspc config focus_follows_pointer  true
 #bspc desktop ^10 -l monocle
 
 ## Window rules ----------------------------------------------#
+#if [[ $(xrandr -q | grep 'HDMI1 connected') ]]; then
+# remove all rules 
+#   bspc rule -r *:*
+#else
+# remove all rules
+   bspc rule -r *:*
 
-# remove all rules first
-bspc rule -r *:*
+   # 1 > terminal
+   bspc rule -a Alacritty desktop='^1' follow=on focus=on
+   bspc rule -a kitty desktop='^1' follow=on focus=on
+   bspc rule -a Xfce4-terminal desktop='^1' follow=on focus=on
 
-# 1 > terminal
-bspc rule -a Alacritty desktop='^1' follow=on focus=on
-bspc rule -a kitty desktop='^1' follow=on focus=on
-bspc rule -a Xfce4-terminal desktop='^1' follow=on focus=on
-#Rbspc rule -a code desktop='^4' follow=on focus=on
-# 2 > web
-bspc rule -a firefox desktop='^2' follow=on focus=on
-bspc rule -a chromium desktop='^2' follow=on focus=on
-bspc rule -a Google-chrome desktop='^2' follow=on focus=on
+   # 2 > web
+   bspc rule -a firefox desktop='^2' follow=on focus=on
+   bspc rule -a chromium desktop='^2' follow=on focus=on
+   bspc rule -a Google-chrome desktop='^2' follow=on focus=on
+   bspc rule -a Microsoft-edge desktop='^2' follow=on focus=on
 
-# 3 > files
-declare -a files=(Pcmanfm Thunar qBittorrent)
-for i in ${files[@]}; do
-   bspc rule -a $i desktop='^3' follow=on focus=on; done
+   # 3 > files
+   declare -a files=(Pcmanfm Thunar qBittorrent)
+   for i in ${files[@]}; do
+      bspc rule -a $i desktop='^3' follow=on focus=on; done
 
-# 4 > code
-declare -a code=(Geany Code)
-for i in ${code[@]}; do
-   bspc rule -a $i desktop='^4' follow=on focus=on; done
+   # 4 > code
+   declare -a code=(Geany Code Eclipse Subl)
+   for i in ${code[@]}; do
+      bspc rule -a $i desktop='^4' follow=on focus=on; done
 
-# 5 > office and docs
-declare -a office=(Gucharmap Atril Evince \
-libreoffice-writer libreoffice-calc libreoffice-impress \
-libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice DesktopEditors )
-for i in ${office[@]}; do
-   bspc rule -a $i desktop='^5' follow=on focus=on; done
+   # 5 > office and docs
+   declare -a office=(Gucharmap Atril Evince \
+   libreoffice-writer libreoffice-calc libreoffice-impress \
+   libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice DesktopEditors )
+   for i in ${office[@]}; do
+      bspc rule -a $i desktop='^5' follow=on focus=on; done
 
-# 6 > Communication
-declare -a comm=(Thunderbird TelegramDesktop Hexchat SiloWhatsappWeb)
-for i in ${comm[@]}; do
-   bspc rule -a $i desktop='^6' follow=on focus=on; done
+   # 6 > Communication
+   declare -a comm=(Thunderbird TelegramDesktop Hexchat)
+   for i in ${comm[@]}; do
+      bspc rule -a $i desktop='^6' follow=on focus=on; done
 
-# 7 > media
-declare -a media=(Audacity Music MPlayer Lxmusic Inkscape Gimp-2.10 obs)
-for i in ${media[@]}; do
-   bspc rule -a $i desktop='^7' state=floating follow=on focus=on; done
+   # 7 > media
+   declare -a media=(Audacity Music MPlayer Lxmusic Inkscape Gimp-2.10 obs)
+   for i in ${media[@]}; do
+      bspc rule -a $i desktop='^7' state=floating follow=on focus=on; done
 
-bspc config external_rules_command ~/.config/bspwm/bin/spotify-rule
+   bspc config external_rules_command ~/.config/bspwm/bin/spotify-rule
 
-# 8 > settings
-bspc rule -a 'VirtualBox Manager' desktop='^8' follow=on focus=on
-bspc rule -a GParted desktop='^8' follow=on focus=on
-bspc rule -a Nitrogen desktop='^8' follow=on focus=on
-bspc rule -a WallpaperSet desktop='^8' state=floating follow=on focus=on
-bspc rule -a ColorScheme desktop='^8' state=floating follow=on focus=on
-declare -a settings=(Lxappearance Lxtask Lxrandr Arandr \
-System-config-printer.py Pavucontrol Exo-helper-1 \
-Xfce4-power-manager-settings)
-for i in ${settings[@]}; do
-   bspc rule -a $i desktop='^8' state=floating follow=on focus=on; done
+   # 8 > settings
+   bspc rule -a 'VirtualBox Manager' desktop='^8' follow=on focus=on
+   bspc rule -a GParted desktop='^8' follow=on focus=on
+   bspc rule -a Nitrogen desktop='^8' follow=on focus=on
+   bspc rule -a WallpaperSet desktop='^8' state=floating follow=on focus=on
+   bspc rule -a ColorScheme desktop='^8' state=floating follow=on focus=on
+   declare -a settings=(Lxappearance Lxtask Lxrandr Arandr \
+   System-config-printer.py Pavucontrol Exo-helper-1 \
+   Xfce4-power-manager-settings Blueberry.py )
+   for i in ${settings[@]}; do
+      bspc rule -a $i desktop='^8' state=floating follow=on focus=on; done
 
-# special rules
-declare -a floating=(alacritty-float Onboard Yad 'Firefox:Places' \
-Viewnior feh Nm-connection-editor)
-for i in ${floating[@]}; do
-   bspc rule -a $i state=floating follow=on focus=on; done
+   # special rules
+   declare -a floating=(alacritty-float Onboard Yad 'Firefox:Places' \
+   Viewnior feh Nm-connection-editor)
+   for i in ${floating[@]}; do
+      bspc rule -a $i state=floating follow=on focus=on; done
 
-bspc rule -a Conky state=floating manage=off
-bspc rule -a stalonetray state=floating manage=off
+   bspc rule -a Conky state=floating manage=off
+   bspc rule -a stalonetray state=floating manage=off
 
-bscp rule -a polybar manage=off
-bspc rule -a Tint2 border=off manage=off layer=above state=floating
-# bspc rule -a Mylaunchpad border=off manage=off
-bspc rule -a '*:Kunst' sticky=on layer=below border=off focus=off
-# bspc rule -a Sxiv:Kunst sticky=on layer=below border=off focus=off manage=off rectangle=250x250+1055+60
+   bscp rule -a polybar manage=off
+   bspc rule -a Tint2 border=off manage=off layer=above state=floating
+   # bspc rule -a Mylaunchpad border=off manage=off
+   bspc rule -a '*:Kunst' sticky=on layer=below border=off focus=off
+   # bspc rule -a Sxiv:Kunst sticky=on layer=below border=off focus=off manage=off rectangle=250x250+1055+60
 
-# Set Desktop 7 to start with floating windows
-#FLOATING_DESKTOP_ID=$(bspc query -D -d '^7')
-#bspc subscribe node_manage | while read -a msg ; do
-#	desk_id=${msg[2]}
-#	wid=${msg[3]}
-#	[ "$FLOATING_DESKTOP_ID" = "$desk_id" ] && bspc node "$wid" -t floating
-#done
+   # Set Desktop 7 to start with floating windows
+   #FLOATING_DESKTOP_ID=$(bspc query -D -d '^7')
+   #bspc subscribe node_manage | while read -a msg ; do
+   #	desk_id=${msg[2]}
+   #	wid=${msg[3]}
+   #	[ "$FLOATING_DESKTOP_ID" = "$desk_id" ] && bspc node "$wid" -t floating
+   #done
+#fi
 
 ## Autostart -------------------------------------------------#
 
 # Kill if already running
-killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager mpd-notification
+killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager \
+           mpd-notification glava xfce4-panel
 
 # Lauch xsettingsd daemon
 xsettingsd &
@@ -153,24 +168,22 @@ nitrogen --restore &
 # Start mpd
 exec mpd &
 exec mpd-notification &
+exec mpc update &
+exec glava -d &
 
 # Start bspwm scripts
 bspcomp
 bspdunst
 
-#dunst &
-#picom &
-#xfce4-power-manager &
-#xfce4-session &
-#xrandr -s 1366x768 &
-#nitrogen --restore &
-~/.config/bspwm/polybar/launch.sh &
-#synclient TapButton1=1 
-#wmname compiz7
-#mako &
+## Panel
 
-#export _JAVA_AWT_WM_NONREPARENTING=1 &
-mpc update &
+#Polybar
+~/.config/bspwm/polybar/launch.sh &
+
+#XFCE Panel
+#xfce4-panel &
+#nm-applet &
+
 
 # restart window titles daemon
 while pgrep -u $UID -f bspwm_window_title >/dev/null; do pkill -f bspwm_window_title; done

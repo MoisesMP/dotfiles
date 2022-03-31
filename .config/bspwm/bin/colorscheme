@@ -3,6 +3,7 @@ set -e
 
 Flamingo(){
     cp -r ~/.config/bspwm/Colors/Flamingo/* ~/.config/bspwm/
+    cp ~/.config/bspwm/Colors/Glava/Flamingo/bars.glsl ~/.config/glava/
     sleep 0.1
     echo -en "Finished..."
     sleep 1
@@ -12,6 +13,7 @@ Flamingo(){
 
 Mauve(){
     cp -r ~/.config/bspwm/Colors/Mauve/* ~/.config/bspwm/
+    cp ~/.config/bspwm/Colors/Glava/Mauve/bars.glsl ~/.config/glava/
     sleep 0.1
     echo -en "Finished..."
     sleep 1
@@ -21,6 +23,7 @@ Mauve(){
 
 Pink(){
     cp -r ~/.config/bspwm/Colors/Pink/* ~/.config/bspwm/
+    cp ~/.config/bspwm/Colors/Glava/Pink/bars.glsl ~/.config/glava/
     sleep 0.1
     echo -en "Finished..."
     sleep 1
@@ -30,6 +33,7 @@ Pink(){
 
 Maroon(){
     cp -r ~/.config/bspwm/Colors/Maroon/* ~/.config/bspwm/
+    cp ~/.config/bspwm/Colors/Glava/Maroon/bars.glsl ~/.config/glava/
     sleep 0.1
     echo -en "Finished..."
     sleep 1
@@ -39,6 +43,7 @@ Maroon(){
 
 Red(){
     cp -r ~/.config/bspwm/Colors/Red/* ~/.config/bspwm/
+    cp ~/.config/bspwm/Colors/Glava/Red/bars.glsl ~/.config/glava/
     sleep 0.1
     echo -en "Finished..."
     sleep 1
@@ -48,6 +53,7 @@ Red(){
 
 Peach(){
     cp -r ~/.config/bspwm/Colors/Peach/* ~/.config/bspwm/
+    cp ~/.config/bspwm/Colors/Glava/Peach/bars.glsl ~/.config/glava/
     sleep 0.1
     echo -en "Finished..."
     sleep 1
@@ -57,6 +63,7 @@ Peach(){
 
 Yellow(){
     cp -r ~/.config/bspwm/Colors/Yellow/* ~/.config/bspwm/
+    cp ~/.config/bspwm/Colors/Glava/Yellow/bars.glsl ~/.config/glava/
     sleep 0.1
     echo -en "Finished..."
     sleep 1
@@ -66,6 +73,7 @@ Yellow(){
 
 Green(){
     cp -r ~/.config/bspwm/Colors/Green/* ~/.config/bspwm/
+    cp ~/.config/bspwm/Colors/Glava/Green/bars.glsl ~/.config/glava/
     sleep 0.1
     echo -en "Finished..."
     sleep 1
@@ -75,6 +83,7 @@ Green(){
 
 Teal(){
     cp -r ~/.config/bspwm/Colors/Teal/* ~/.config/bspwm/
+    cp ~/.config/bspwm/Colors/Glava/Teal/bars.glsl ~/.config/glava/
     sleep 0.1
     echo -en "Finished..."
     sleep 1
@@ -84,6 +93,7 @@ Teal(){
 
 Blue(){
     cp -r ~/.config/bspwm/Colors/Blue/* ~/.config/bspwm/
+    cp ~/.config/bspwm/Colors/Glava/Blue/bars.glsl ~/.config/glava/
     sleep 0.1
     echo -en "Finished..."
     sleep 1
@@ -93,6 +103,7 @@ Blue(){
 
 Sky(){
     cp -r ~/.config/bspwm/Colors/Sky/* ~/.config/bspwm/
+    cp ~/.config/bspwm/Colors/Glava/Sky/bars.glsl ~/.config/glava/
     sleep 0.1
     echo -en "Finished..."
     sleep 1

@@ -11,16 +11,17 @@
 ;;
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+
 [module/volume]
 type = internal/alsa
 format-volume = <ramp-volume> <label-volume>
-format-volume-padding = 2
+format-volume-padding = 1
 label-volume = %percentage%%
 label-muted = "婢"
 label-muted-foreground = ${color.Gray-1}
-label-muted-padding = 2
+label-muted-padding = 1
 interval = 5
-click-left = pavucontrol
+click-right = pavucontrol
 
 ramp-volume-0 = 奄
 ramp-volume-1 = 奄
@@ -46,6 +47,7 @@ type = internal/xbacklight
 interval = 1
 card = intel_backlight
 format = <ramp> <label>
+format-padding = 1
 label = %percentage%%
 ramp-0 = 
 ramp-1 = 
@@ -93,11 +95,12 @@ accumulate-stats = true
 unknown-as-up = true
 
 format-connected = "<ramp-signal> <label-connected> "
+format-connected-padding = 1
 
 format-disconnected = <label-disconnected>
 format-disconnected-prefix = " "
 format-disconnected-prefix-foreground = ${color.Gray-1}
-format-padding = 1
+format-disconnected-padding = 1
 #ramp-signal-padding = 1
 label-connected = "%{A1:networkmanager_dmenu &:}%downspeed%%{A}"
 # essid%%{A}"
@@ -129,7 +132,7 @@ format-prefix = " "
 format-padding = 1
 format-prefix-foreground = ${color.Background-A}
 ;format-prefix-foreground = ${color.Red}
-click-left = kitty -e paru -Syu
+click-left = kitty -e yay -Syu
 tail = true
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -183,7 +186,63 @@ label-occupied-foreground = ${color.White}
 ; vim:ft=dosini
 
 
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = true
+inline-mode = false
+
+enable-click = true
+enable-scroll = true
+reverse-scroll = true
+
+fuzzy-match = true
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-default = 
+
+format = <label-state>
+format-font = 2
+
+label-monitor = %name%
+
+label-focused = %name%
+label-focused-foreground = ${color.Background-A}
+;;label-focused-background = ${color.}
+label-focused-underline = ${color.Background-A}
+label-focused-padding = 1
+
+label-occupied = %name%
+label-occupied-foreground = ${color.White}
+;;label-occupied-background = ${color.}
+label-occupied-padding = 1
+
+label-urgent = %name%
+label-urgent-foreground = ${Background-A}
+;label-urgent-background = ${color.}
+label-urgent-underline = ${color.Background-A}
+label-urgent-padding = 1
+
+label-empty = %name%
+label-empty-foreground = ${color.Gray-0}
+label-empty-padding = 1
+
+; Separator in between workspaces
+;label-separator = "∙"
+;label-separator-padding = 0
+;label-separator-foreground = ${color.Red}
+
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
 
 [module/mod]
 type = internal/bspwm
@@ -449,3 +508,12 @@ type = custom/script
 ;tail = true
 interval = 1
 exec = ~/.config/bspwm/polybar/scripts/xxwindow.sh
+
+[module/popup-calendar]
+type = custom/script
+exec = ~/.config/bspwm/polybar/scripts/popup-calendar.sh
+format-background = ${color.Background-A}
+format-foreground = ${color.Foreground-A}
+format-padding = 1
+interval = 5
+click-left = ~/.config/bspwm/polybar/scripts/popup-calendar.sh --popup &

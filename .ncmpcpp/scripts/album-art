@@ -25,7 +25,7 @@ main() {
     kill_previous_instances >/dev/null 2>&1
     find_cover_image        >/dev/null 2>&1
     display_cover_image     2>/dev/null
-    dunstify -u low --replace=69 -i "$cover_path" "$(mpc current)"
+    #dunstify -u low --replace=69 -i "$cover_path" "$(mpc current)"
     detect_window_resizes   >/dev/null 2>&1
 }
 

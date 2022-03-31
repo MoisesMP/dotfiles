@@ -41,9 +41,10 @@ height = 30
 background = ${color.Background}
 foreground = ${color.Foreground}
 override-redirect = false
-offset-y = 5
+offset-y = 4
 
 wm-restack = bspwm
+
 
 
 [bar/top-ws]
@@ -58,6 +59,66 @@ line-size = 2
 ; bspwm
 ; workspaces
 modules-center = workspaces 
+
+[bar/top-ws1-external]
+inherit = bar/base
+monitor = HDMI1
+width = 15% 
+;22.0%
+
+offset-x = 1%
+line-size = 2
+
+; Options available for the workspaces module
+; bspwm
+; workspaces
+modules-center = bspwm 
+
+[bar/top-ws2-external]
+inherit = bar/base
+monitor = eDP1
+width = 15% 
+;22.0%
+
+offset-x = 1%
+line-size = 2
+
+; Options available for the workspaces module
+; bspwm
+; workspaces
+modules-center = bspwm 
+
+[bar/top-title-external]
+inherit = bar/base
+monitor = HDMI1
+width = 23%
+
+offset-x = 18.5%
+
+modules-left = mod title
+;;windowlist
+;xxwindow
+;title
+
+[bar/top-music-external]
+inherit = bar/base
+monitor = HDMI1
+width = 23%
+
+offset-x = 44.5%
+; Spotify (uses playerctl)
+; modules-left = previous playpause next spotify
+; Mpd
+modules-left = mpd mpd-scroll 
+
+[bar/top-tray-external]
+inherit = bar/base
+monitor = HDMI1
+width = 29%
+
+offset-x = 70%
+
+modules-right = pkg battery backlight volume network popup-calendar
 
 
 [bar/top-title]
@@ -83,11 +144,12 @@ modules-left = mpd mpd-scroll
 
 [bar/top-tray]
 inherit = bar/base
+
 width = 29%
 
 offset-x = 70%
 
-modules-right = pkg battery backlight volume network date
+modules-right = pkg battery backlight volume network popup-calendar
 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

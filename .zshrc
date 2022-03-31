@@ -147,4 +147,4 @@ alias rm='rm -i'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #eval "$(starship init zsh)"
 export PATH="$PATH:$HOME/.spicetify"
-#neofetch
+neofetch
