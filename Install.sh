@@ -249,6 +249,11 @@ backupfiles(){
 	file=.zshrc && checkfileshome;
 }
 
+symboliclinks(){
+  sudo ln -s ~/.config/bspwm/bspwm_window_titles.sh /usr/local/bin/bspwm_window_title
+  sudo ln -s ~/.config/bspwm/bin/music /usr/local/bin/music
+}
+
 dotfiles(){
 	echo
 	echo -en " ${y}Press Enter To Continue${endc}"
@@ -258,14 +263,10 @@ dotfiles(){
 	echo -e "	If you have previous configurations were saved in ${Green} $HOME/.config/old ${DefaultColor}"
 	sleep 0.5
 	copyfiles
+	symboliclinks
 	echo -en " ${y}Press Enter To Return To Menu${endc}"
 	echo
 	read input
-}
-
-symboliclinks(){
-  sudo ln -s ~/.config/bspwm/bspwm_window_titles.sh /usr/local/bin/bspwm_window_title
-  sudo ln -s ~/.config/bspwm/bin/music /usr/local/bin/music
 }
 
 menu(){
