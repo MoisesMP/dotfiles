@@ -146,6 +146,12 @@ checkyay(){
 	fi
 }
 
+mpd-notification(){
+	git clone https://github.com/eworm-de/mpd-notification
+	cd mpd-notification && make && sudo make install
+	cd ..
+}
+
 packages(){
 	echo
 	echo -en " ${y}Press Enter To Continue${endc}"
@@ -155,14 +161,18 @@ packages(){
          acpi mpd mpc ncmpcpp xorg-xsetroot nitrogen networkmanager-dmenu-git   \
          wmctrl checkupdates-systemd-git neovim vim imagemagick libnotify xclip \
          alacritty zscroll playerctl betterlockscreen neofetch lxappearance     \
-         exa ueberzug w3m xfce4-settings ttf-iosevka-nerd curl zsh cava glava --noconfirm
+         exa ueberzug w3m xfce4-settings ttf-iosevka-nerd curl zsh cava glava libnotify \
+         libmpdclient --noconfirm
 	echo
+	mpd-notification
 	echo -e $Green " Packages Was Successfully Installed"
 	sleep 0.5
 	echo -en " ${y}Press Enter To Return To Menu${endc}"
 	echo
 	read input
 }
+
+
 
 dir=;
 
@@ -174,6 +184,7 @@ checkdirold(){
 	fi
 }
 
+ 
 checkdirconfig(){
 	if [[ -d $HOME/.config/ ]]; then 
 		checkdirold 

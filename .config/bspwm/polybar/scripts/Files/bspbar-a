@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Terminate already running bar instances
+# If all your bars have ipc enabled, you can use 
+#polybar-msg cmd quit
+killall -q polybar
+
+while pgrep -x polybar >/dev/null; do sleep 0.1; done
+
+# Bar-A
+~/.config/bspwm/polybar/bar-a.sh &
+
+# Bar-B
+#~/.config/bspwm/polybar/bar-b.sh &

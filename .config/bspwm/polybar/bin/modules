@@ -11,6 +11,17 @@
 ;;
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+[module/polybar]
+type = custom/text
+content = "懲"
+content-padding    = 1
+content-foreground = ${color.Foreground-A}
+content-background = ${color.Background-A}
+click-left = ~/.config/bspwm/bin/color
+click-middle = ~/.config/bspwm/bin/Wall
+click-right = ~/.config/bspwm/polybar/scripts/barchange.sh --normal
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/volume]
 type = internal/alsa
@@ -277,7 +288,7 @@ format-padding = 1
 ;   %title%
 ; Default: %title%
 label = %title%
-label-maxlen = 50
+label-maxlen = 35
 
 ; Used instead of label when there is no window title
 ; Available tokens:
@@ -382,7 +393,7 @@ label-song =  "%artist% - %title%"
 label-song-maxlen = 30
 label-song-ellipsis = true
 
-label-offline = "MPD is offline"
+label-offline =  ﱙ 
 
 ; Only applies if <icon-X> is used
 icon-play = 契

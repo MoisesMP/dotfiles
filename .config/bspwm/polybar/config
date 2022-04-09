@@ -58,7 +58,7 @@ line-size = 2
 ; Options available for the workspaces module
 ; bspwm
 ; workspaces
-modules-center = workspaces 
+modules-center = bspwm 
 
 [bar/top-ws1-external]
 inherit = bar/base
@@ -118,7 +118,7 @@ width = 29%
 
 offset-x = 70%
 
-modules-right = pkg battery backlight volume network popup-calendar
+modules-right = backlight volume battery network date polybar
 
 
 [bar/top-title]
@@ -149,7 +149,7 @@ width = 29%
 
 offset-x = 70%
 
-modules-right = pkg battery backlight volume network popup-calendar
+modules-right = backlight volume battery network date polybar
 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

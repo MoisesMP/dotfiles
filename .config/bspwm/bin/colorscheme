@@ -2,8 +2,8 @@
 set -e
 
 Flamingo(){
-    cp -r ~/.config/bspwm/Colors/Flamingo/* ~/.config/bspwm/
-    cp ~/.config/bspwm/Colors/Glava/Flamingo/bars.glsl ~/.config/glava/
+    cp -r ~/.config/bspwm/Colors/Flamingo/* ~/.config/bspwm/;
+    cp ~/.config/bspwm/Colors/Glava/Flamingo/bars.glsl ~/.config/glava/;
     sleep 0.1
     echo -en "Finished..."
     sleep 1

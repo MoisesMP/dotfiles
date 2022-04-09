@@ -39,7 +39,7 @@ bspc config split_ratio            0.5
 #bspc config borderless_monocle    true
 #bspc config gapless_monocle       true
 #bspc config single_monocle        false
-#bspc config focus_follows_pointer  true
+bspc config focus_follows_pointer  true
 
 #bspc desktop ^1 -l monocle
 #bspc desktop ^2 -l monocle
@@ -100,8 +100,8 @@ bspc config split_ratio            0.5
    bspc rule -a 'VirtualBox Manager' desktop='^8' follow=on focus=on
    bspc rule -a GParted desktop='^8' follow=on focus=on
    bspc rule -a Nitrogen desktop='^8' follow=on focus=on
-   bspc rule -a WallpaperSet desktop='^8' state=floating follow=on focus=on
-   bspc rule -a ColorScheme desktop='^8' state=floating follow=on focus=on
+   bspc rule -a WallpaperSet state=floating follow=on focus=on
+   bspc rule -a ColorScheme state=floating follow=on focus=on
    declare -a settings=(Lxappearance Lxtask Lxrandr Arandr \
    System-config-printer.py Pavucontrol Exo-helper-1 \
    Xfce4-power-manager-settings Blueberry.py )
@@ -136,7 +136,7 @@ bspc config split_ratio            0.5
 
 # Kill if already running
 killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager \
-           mpd-notification glava xfce4-panel
+           mpd-notification glava xfce4-panel komorebi
 
 # Lauch xsettingsd daemon
 xsettingsd &
@@ -163,7 +163,7 @@ xsetroot -cursor_name left_ptr
 #wallpaper
 #bash $HOME/.fehbg
 nitrogen --restore &
-
+#komorebi &
 
 # Start mpd
 exec mpd &
@@ -178,7 +178,11 @@ bspdunst
 ## Panel
 
 #Polybar
-~/.config/bspwm/polybar/launch.sh &
+bspbar
+
+# eww bar
+#eww open bar0
+#~/.config/eww/bar/launch
 
 #XFCE Panel
 #xfce4-panel &
