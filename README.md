@@ -7,33 +7,33 @@ Float
 ![Float](./Screenshots/bar-float.png)
 
 Normal
-![Float](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/bar-normal.png)
+![Float](./Screenshots/bar-normal.png)
 
 ### Desktop
 |  |  |
 |-|-|
 |Flamingo|Mauve|
-| ![Flamingo](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Flamingo.png) | ![Mauve](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Mauve.png) |
+| ![Flamingo](./Screenshots/Flamingo.png) | ![Mauve](./Screenshots/Mauve.png) |
 |Pink|Maroon|
-| ![Pink](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Pink.png) | ![Maroon](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Maroon.png) |
+| ![Pink](./Screenshots/Pink.png) | ![Maroon](./Screenshots/Maroon.png) |
 |Red|Peach|
-| ![Red](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Red.png) | ![Peach](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Peach.png) |
+| ![Red](./Screenshots/Red.png) | ![Peach](./Screenshots/Peach.png) |
 |Yellow|Green|
-| ![Yellow](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Yellow.png) | ![Green](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Green.png) |
+| ![Yellow](./Screenshots/Yellow.png) | ![Green](./Screenshots/Green.png) |
 |Teal|Blue|
-| ![Teal](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Teal.png) | ![Blue](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Blue.png) |
+| ![Teal](./Screenshots/Teal.png) | ![Blue](./Screenshots/Blue.png) |
 |Sky|  |
-| ![Sky](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Sky.png) |  |
+| ![Sky](./Screenshots/Sky.png) |  |
 
 ### Others
 |  |  |
 |-|-|
 |Neofetch|Ncmpcpp|
-| ![Neofetch](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Neofetch.png) | ![Ncmpcpp](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Ncmpcpp.png) |
+| ![Neofetch](./Screenshots/Neofetch.png) | ![Ncmpcpp](./Screenshots/Ncmpcpp.png) |
 |Cava|Wallpaper|
-| ![Cava](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Cava.png) | ![Wallpaper](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Wallpaper.png) |
+| ![Cava](./Screenshots/Cava.png) | ![Wallpaper](./Screenshots/Wallpaper.png) |
 |Color Scheme| |
-| ![Color](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/Color.png) |  |
+| ![Color](./Screenshots/Color.png) |  |
 
 ## Packages
 - Window Manager: [BSPWM](https://github.com/baskerville/bspwm) 
