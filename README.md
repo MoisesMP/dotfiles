@@ -88,9 +88,8 @@ Can replace paru with yay
 ## User's configuration
 **Network Module**
 If you have an error with the wifi module, change the network interface to
-```cfg
-   ~/.config/bspwm/polybar/bin/modules
-```
+` ~/.config/bspwm/polybar/bin/modules`
+
 ```cfg
   ...
    [module/network]
@@ -106,8 +105,7 @@ If you have an error with the wifi module, change the network interface to
    - - note the name of the wifi network interface begins with wl
 
 **MPD Music Directory**
-- Edit
-` ~/.mpd/mpd.conf`
+- Edit ` ~/.mpd/mpd.conf`
 ```cfg
   ...
   
@@ -118,8 +116,7 @@ If you have an error with the wifi module, change the network interface to
 Change it to your preferred directory
 
 **Ncmpcpp Music Directory**
-- Edit
-` ~/.ncmpcpp/config` and ` ~/.ncmpcpp/config-art`
+- Edit ` ~/.ncmpcpp/config` and ` ~/.ncmpcpp/config-art`
 ```cfg
   ...
   
