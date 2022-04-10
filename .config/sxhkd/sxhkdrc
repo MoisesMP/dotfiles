@@ -8,15 +8,15 @@ super + Return
 
 # Program launcher
 alt + F1
-	sh ~/.config/bspwm/bin/launcher
+	bsplauncher
 
 # Music
 super + m
-	music
+	bspmusic
 
 # Power menu
 super + x
-	sh ~/.config/bspwm/bin/sysmenu
+	bspsysmenu
 
 # Network menu
 super + n 
@@ -36,7 +36,7 @@ ctrl + alt + {v,n,r,b}
 
 # Lockscreen
 ctrl + alt + l
-    betterlockscreen -l
+    betterlockscreen -l blur
 
 
 ##---------- System Keys ----------##
@@ -55,11 +55,11 @@ XF86MonBrightness{Up,Down}
 	
 # Volume control
 XF86Audio{RaiseVolume,LowerVolume}
-	~/.config/bspwm/bin/volume {--up,--down}
+	bspvolume {--up,--down}
 	#amixer -D pulse sset Master {5%+,5%-} unmute
 
 XF86AudioMute
-	~/.config/bspwm/bin/volume --toggle
+	bspvolume --toggle
 	#amixer set Master toggle 
 
 # Music control

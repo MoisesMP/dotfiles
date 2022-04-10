@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [[ "$DESKTOP_SESSION" == "bspwm" ]]; then
+	CONFIG="$HOME/.config/bspwm/kitty/kitty.conf"
+else
+	CONFIG="$HOME/.config/kitty/kitty.conf"
+fi
+
+kitty --class 'WallpaperSet' --config "$CONFIG" -e  ~/.config/bspwm/files/Wallpaper  

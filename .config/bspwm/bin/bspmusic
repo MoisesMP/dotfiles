@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+## Run ncmpcpp with alternate config
+
+if [[ "$DESKTOP_SESSION" == "bspwm" ]]; then
+	CONFIG="$HOME/.config/bspwm/kitty/kitty.conf"
+else
+	CONFIG="$HOME/.config/kitty/kitty.conf"
+fi
+
+kitty --class 'Music' --config "$CONFIG" -e ~/.ncmpcpp/scripts/ncmpcpp-art

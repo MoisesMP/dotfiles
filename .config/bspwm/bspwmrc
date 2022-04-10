@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="${PATH}:$HOME/.config/bspwm/bin"
 bspc config pointer_modifier mod1
 
@@ -57,8 +58,9 @@ bspc config focus_follows_pointer  true
    bspc rule -r *:*
 
    # 1 > terminal
-   bspc rule -a Alacritty desktop='^1' follow=on focus=on
    bspc rule -a kitty desktop='^1' follow=on focus=on
+   bspc rule -a Alacritty desktop='^1' follow=on focus=on
+   bspc rule -a Tilix desktop='^1' follow=on focus=on
    bspc rule -a Xfce4-terminal desktop='^1' follow=on focus=on
 
    # 2 > web
@@ -90,11 +92,11 @@ bspc config focus_follows_pointer  true
       bspc rule -a $i desktop='^6' follow=on focus=on; done
 
    # 7 > media
-   declare -a media=(Audacity Music MPlayer Lxmusic Inkscape Gimp-2.10 obs)
+   declare -a media=(Audacity Music MPlayer Lxmusic Inkscape Gimp-2.10 obs jamesdsp)
    for i in ${media[@]}; do
       bspc rule -a $i desktop='^7' state=floating follow=on focus=on; done
 
-   bspc config external_rules_command ~/.config/bspwm/bin/spotify-rule
+   bspc config external_rules_command ~/.config/bspwm/external_rules/spotify-rule
 
    # 8 > settings
    bspc rule -a 'VirtualBox Manager' desktop='^8' follow=on focus=on
@@ -136,7 +138,7 @@ bspc config focus_follows_pointer  true
 
 # Kill if already running
 killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager \
-           mpd-notification glava xfce4-panel komorebi
+           mpd-notification glava
 
 # Lauch xsettingsd daemon
 xsettingsd &
@@ -160,10 +162,8 @@ xfce4-power-manager &
 xsetroot -cursor_name left_ptr
 
 # Restore wallpaper
-#wallpaper
-#bash $HOME/.fehbg
-nitrogen --restore &
-#komorebi &
+#nitrogen --restore &
+bspwall
 
 # Start mpd
 exec mpd &
@@ -176,19 +176,9 @@ bspcomp
 bspdunst
 
 ## Panel
-
-#Polybar
 bspbar
-
-# eww bar
-#eww open bar0
-#~/.config/eww/bar/launch
-
-#XFCE Panel
-#xfce4-panel &
-#nm-applet &
 
 
 # restart window titles daemon
-while pgrep -u $UID -f bspwm_window_title >/dev/null; do pkill -f bspwm_window_title; done
-bspwm_window_title &
+while pgrep -u $UID -f bspwm_window_titles >/dev/null; do pkill -f bspwm_window_titles; done
+bspwm_window_titles &

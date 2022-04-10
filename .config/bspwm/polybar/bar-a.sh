@@ -10,4 +10,4 @@
 
 # Launch bar
 echo "---" | tee -a /tmp/polybar1.log
-polybar -c ~/.config/bspwm/polybar/config-a.ini base 2>&1 | tee -a /tmp/polybar1.log & disown
+polybar --reload -c ~/.config/bspwm/polybar/config-a.ini base 2>&1 | tee -a /tmp/polybar1.log & disown

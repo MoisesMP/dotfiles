@@ -7,8 +7,24 @@ killall -q polybar
 
 while pgrep -x polybar >/dev/null; do sleep 0.1; done
 
-# Bar-A
-~/.config/bspwm/polybar/bar-a.sh &
+#Window Title
 
-# Bar-B
-#~/.config/bspwm/polybar/bar-b.sh &
+CPID=$(pgrep -x polybar)
+
+if [ -n "${CPID}" ] ; then
+  kill -TERM ${CPID}
+fi
+
+for m in $( bspc query -M --names ); do
+    index=$((index + 1))
+    export P_BSPWM_WINDOW_CMD="tail ~/.cache/bspwm_windows_${index}.txt"
+
+    #Launch Bar
+
+    # Bar-A
+    ~/.config/bspwm/polybar/bar-a.sh &
+
+    # Bar-B
+    #~/.config/bspwm/polybar/bar-b.sh &
+done
+

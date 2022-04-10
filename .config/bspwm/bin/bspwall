@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Wall feh
+
+feh --bg-center --bg-fill ~/.cache/betterlockscreen/current/wall_resize.png

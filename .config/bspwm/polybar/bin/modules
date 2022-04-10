@@ -17,9 +17,9 @@ content = "懲"
 content-padding    = 1
 content-foreground = ${color.Foreground-A}
 content-background = ${color.Background-A}
-click-left = ~/.config/bspwm/bin/color
-click-middle = ~/.config/bspwm/bin/Wall
-click-right = ~/.config/bspwm/polybar/scripts/barchange.sh --normal
+click-left = bspcolor
+click-middle = bspwallpaper
+click-right = bspbarchange --normal
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

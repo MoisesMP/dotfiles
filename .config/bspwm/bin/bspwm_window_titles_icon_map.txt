@@ -1,0 +1,11 @@
+Google-chrome 
+firefox 
+Code 
+Music 
+WallpaperSet 
+kitty 
+tilix 
+Alacritty 
+Pcmanfm 
+Thunar 
+Fallback ·
