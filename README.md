@@ -107,9 +107,7 @@ If you have an error with the wifi module, change the network interface to
 
 **MPD Music Directory**
 - Edit
-```cfg
-   ~/.mpd/mpd.conf
-```
+` ~/.mpd/mpd.conf`
 ```cfg
   ...
   
@@ -121,8 +119,7 @@ Change it to your preferred directory
 
 **Ncmpcpp Music Directory**
 - Edit
-` ~/.ncmpcpp/config`
-` ~/.ncmpcpp/config-art`
+` ~/.ncmpcpp/config` and ` ~/.ncmpcpp/config-art`
 ```cfg
   ...
   
