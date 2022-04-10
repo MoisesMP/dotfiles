@@ -135,9 +135,9 @@ Change it to your preferred directory
   ...
  ```
  Change it to your preferred directory
-```cfg
-   ~/.ncmpcpp/scripts/album-art
-```
+ 
+ **~/.ncmpcpp/scripts/album-art**
+ 
 ```cfg
   ...
   
