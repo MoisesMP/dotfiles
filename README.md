@@ -121,12 +121,8 @@ Change it to your preferred directory
 
 **Ncmpcpp Music Directory**
 - Edit
-```cfg
-   ~/.ncmpcpp/config
-```
-```cfg
-   ~/.ncmpcpp/config-art
-```
+` ~/.ncmpcpp/config`
+` ~/.ncmpcpp/config-art`
 ```cfg
   ...
   
@@ -136,7 +132,7 @@ Change it to your preferred directory
  ```
  Change it to your preferred directory
  
- **~/.ncmpcpp/scripts/album-art**
+ ` ~/.ncmpcpp/scripts/album-art`
  
 ```cfg
   ...
