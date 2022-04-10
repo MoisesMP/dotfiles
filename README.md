@@ -4,7 +4,7 @@ My personal dotfiles for bspwm, ranger, neovim, ncmpcpp, firefox, rofi and more!
 ## Screenshots
 ### Bars
 Float
-![Float](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/bar-float.png)
+![Float](./Screenshots/bar-float.png)
 
 Normal
 ![Float](https://raw.githubusercontent.com/MoisesMP/dotfiles/main/Screenshots/bar-normal.png)
