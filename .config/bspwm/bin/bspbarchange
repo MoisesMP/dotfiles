@@ -1,21 +1,19 @@
 #!/bin/bash
 
-# Bar-A
-bar-a(){
-    cp ~/.config/bspwm/polybar/scripts/Files/bspbar-a ~/.config/bspwm/bin/bspbar
+bar-normal(){
+  sed -i 's/bar_float/bar_normal/' $HOME/.config/bspwm/bin/bspbar;
 	bspc wm -r ;
 	bspc config top_padding 28 ;
 }
 
-# Bar-B
-bar-b(){
-    cp ~/.config/bspwm/polybar/scripts/Files/bspbar-b ~/.config/bspwm/bin/bspbar
+bar-float(){
+  sed -i 's/bar_normal/bar_float/' $HOME/.config/bspwm/bin/bspbar;
 	bspc wm -r ;
 	bspc config top_padding 37 ;
 }
 
 if [[ "$1" == "--normal" ]]; then
-	bar-a;
+	bar-normal;
 elif [[ "$1" == "--float" ]]; then
-	bar-b;
+	bar-float;
 fi

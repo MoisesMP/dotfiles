@@ -1,0 +1,16 @@
+#!/bin/sh
+if ! mpc >/dev/null 2>&1; then
+  echo "Server offline"
+  exit 1
+elif mpc status | grep -q playing; then
+  mpc current | zscroll -l 31 -d 0.1 -p "  "  \
+		-M "mpc status" \
+		-m "playing" "-b ' '" \
+		-m "paused" "-b ' ' -s 0" \
+		-u t "mpc current"
+else
+ echo ""
+fi
+# Block until an event is emitted
+mpc idle >/dev/null
+

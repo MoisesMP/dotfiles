@@ -20,11 +20,6 @@ for m in $( bspc query -M --names ); do
     export P_BSPWM_WINDOW_CMD="tail ~/.cache/bspwm_windows_${index}.txt"
 
     #Launch Bar
-
-    # Bar-A
-    ~/.config/bspwm/polybar/bar-a.sh &
-
-    # Bar-B
-    #~/.config/bspwm/polybar/bar-b.sh &
+    bar_normal & disown
 done
 

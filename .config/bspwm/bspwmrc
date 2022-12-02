@@ -7,7 +7,7 @@ bspc config pointer_modifier mod1
 xrdb -load $HOME/.Xresources &
 
 if [[ $(xrandr -q | grep 'HDMI1 connected') ]]; then
-   randr --output eDP1 --primary --rotate normal --output HDMI1 --rotate normal --right-of eDP1
+   xrandr --output eDP1 --primary --rotate normal --output HDMI1 --rotate normal --right-of eDP1
    #xrandr --output eDP1 --primary --mode 1366x768 --rotate normal --output HDMI1 --mode 1366x768 --rotate normal --right-of eDP1
    bspc monitor eDP1 -n Laptop -d 1 2 3 4 
    bspc monitor HDMI1 -n External -d 5 6 7 8
@@ -17,10 +17,10 @@ else
    bspc monitor -d 1 2 3 4 5 6 7 8 
 fi
 
-bspc config border_width         0
+bspc config border_width         2
 bspc config normal_border_color "#6E6C7E"
 bspc config active_border_color "#F5E0DC"
-bspc config focused_border_color "#C9CBFF"
+bspc config focused_border_color "#DDB6F2"
 bspc config presel_feedback_color "#F5E0DC"
 
 SPACES=$(bspc query -D)
@@ -68,6 +68,8 @@ bspc config focus_follows_pointer  true
    bspc rule -a chromium desktop='^2' follow=on focus=on
    bspc rule -a Google-chrome desktop='^2' follow=on focus=on
    bspc rule -a Microsoft-edge desktop='^2' follow=on focus=on
+   bspc rule -a firefoxdeveloperedition desktop='^2' follow=on focus=on
+   
 
    # 3 > files
    declare -a files=(Pcmanfm Thunar qBittorrent)
@@ -96,6 +98,8 @@ bspc config focus_follows_pointer  true
    for i in ${media[@]}; do
       bspc rule -a $i desktop='^7' state=floating follow=on focus=on; done
 
+   bspc rule -a mpv desktop='^7' follow=on focus=on
+   bspc rule -a vlc desktop='^7' follow=on focus=on
    bspc config external_rules_command ~/.config/bspwm/external_rules/spotify-rule
 
    # 8 > settings
@@ -136,49 +140,4 @@ bspc config focus_follows_pointer  true
 
 ## Autostart -------------------------------------------------#
 
-# Kill if already running
-killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager \
-           mpd-notification glava
-
-# Lauch xsettingsd daemon
-xsettingsd &
-
-# polkit agent
-if [[ ! `pidof xfce-polkit` ]]; then
-	/usr/lib/xfce-polkit/xfce-polkit &
-fi
-
-# Lauch keybindings daemon
-sxhkd &
-
-# Enable Super Keys For Menu
-ksuperkey -e 'Super_L=Alt_L|F1' &
-ksuperkey -e 'Super_R=Alt_L|F1' &
-
-# Enable power management
-xfce4-power-manager &
-
-# Fix cursor
-xsetroot -cursor_name left_ptr
-
-# Restore wallpaper
-#nitrogen --restore &
-bspwall
-
-# Start mpd
-exec mpd &
-exec mpd-notification &
-exec mpc update &
-exec glava -d &
-
-# Start bspwm scripts
-bspcomp
-bspdunst
-
-## Panel
-bspbar
-
-
-# restart window titles daemon
-while pgrep -u $UID -f bspwm_window_titles >/dev/null; do pkill -f bspwm_window_titles; done
-bspwm_window_titles &
+autostart

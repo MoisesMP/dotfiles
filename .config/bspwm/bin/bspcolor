@@ -1,9 +1,360 @@
 #!/usr/bin/env bash
 
-if [[ "$DESKTOP_SESSION" == "bspwm" ]]; then
-	CONFIG="$HOME/.config/bspwm/kitty/kitty.conf"
-else
-	CONFIG="$HOME/.config/kitty/kitty.conf"
-fi
+#
+# Colors
+#
 
-kitty --class 'ColorScheme' --config "$CONFIG" -e  ~/.config/bspwm/files/colorscheme  
+Flamingo(){
+  # Bspwm border focused
+  sed -i 's/bspc config focused_border_color\s*\(.*\)/bspc config focused_border_color "#F2CDCD"/g' $HOME/.config/bspwm/bspwmrc;
+  # Polibar color
+  sed -i 's/Background-A =\s*\(.*\)/Background-A = #F2CDCD/g' $HOME/.config/bspwm/polybar/colors.ini;
+  # Glava
+  sed -i 's/#define COLOR\s*\(.*\)/#define COLOR (#F2CDCD)/g' $HOME/.config/glava/bars.glsl;
+  # Rofi
+  sed -i 's/bg:\s*\(.*\)/bg: #F2CDCD;/g' $HOME/.config/bspwm/files/rofi/colors.rasi;
+  # Dunst
+  sed -i 's/frame_color =\s*\(.*\)/frame_color = "#F2CDCD"/g' $HOME/.config/bspwm/files/dunstrc; 
+}
+
+Mauve(){
+  # Bspwm border focused
+  sed -i 's/bspc config focused_border_color\s*\(.*\)/bspc config focused_border_color "#DDB6F2"/g' $HOME/.config/bspwm/bspwmrc;
+  # Polibar color
+  sed -i 's/Background-A =\s*\(.*\)/Background-A = #DDB6F2/g' $HOME/.config/bspwm/polybar/colors.ini;
+  # Glava
+  sed -i 's/#define COLOR\s*\(.*\)/#define COLOR (#DDB6F2)/g' $HOME/.config/glava/bars.glsl;
+  # Rofi
+  sed -i 's/bg:\s*\(.*\)/bg: #DDB6F2;/g' $HOME/.config/bspwm/files/rofi/colors.rasi;
+  # Dunst
+  sed -i 's/frame_color =\s*\(.*\)/frame_color = "#DDB6F2"/g' $HOME/.config/bspwm/files/dunstrc; 
+}
+
+Pink(){
+  # Bspwm border focused
+  sed -i 's/bspc config focused_border_color\s*\(.*\)/bspc config focused_border_color "#F5C2E7/"/g' $HOME/.config/bspwm/bspwmrc;
+  # Polibar color
+  sed -i 's/Background-A =\s*\(.*\)/Background-A = #F5C2E7/g' $HOME/.config/bspwm/polybar/colors.ini
+  # Glava
+  sed -i 's/#define COLOR\s*\(.*\)/#define COLOR (#F5C2E7)/g' $HOME/.config/glava/bars.glsl;
+  # Rofi
+  sed -i 's/bg:\s*\(.*\)/bg: #F5C2E7;/g' $HOME/.config/bspwm/files/rofi/colors.rasi;
+  # Dunst
+  sed -i 's/frame_color =\s*\(.*\)/frame_color = "#F5C2E7"/g' $HOME/.config/bspwm/files/dunstrc; 
+}
+
+Maroon(){
+  # Bspwm border focused
+  sed -i 's/bspc config focused_border_color\s*\(.*\)/bspc config focused_border_color "#E8A2AF"/g' $HOME/.config/bspwm/bspwmrc;
+  # Polibar color
+  sed -i 's/Background-A =\s*\(.*\)/Background-A = #E8A2AF/g' $HOME/.config/bspwm/polybar/colors.ini;
+  # Glava
+  sed -i 's/#define COLOR\s*\(.*\)/#define COLOR (#E8A2AF)/g' $HOME/.config/glava/bars.glsal;
+  # Rofi
+  sed -i 's/bg:\s*\(.*\)/bg: #E8A2AF;/g' $HOME/.config/bspwm/files/rofi/colors.rasi;
+  # Dunst
+  sed -i 's/frame_color =\s*\(.*\)/frame_color = "#E8A2AF"/g' $HOME/.config/bspwm/files/dunstrc; 
+}
+
+Red(){
+  # Bspwm border focused
+  sed -i 's/bspc config focused_border_color\s*\(.*\)/bspc config focused_border_color "#F28FAD"/g' $HOME/.config/bspwm/bspwmrc;
+  # Polibar color
+  sed -i 's/Background-A =\s*\(.*\)/Background-A = #F28FAD/g' $HOME/.config/bspwm/polybar/colors.ini;
+  # Glava
+  sed -i 's/#define COLOR\s*\(.*\)/#define COLOR (#F28FAD)/g' $HOME/.config/glava/bars.glsl;
+  # Rofi
+  sed -i 's/bg:\s*\(.*\)/bg: #F28FAD;/g' $HOME/.config/bspwm/files/rofi/colors.rasi;
+  # Dunst
+  sed -i 's/frame_color =\s*\(.*\)/frame_color = "#F28FAD"/g' $HOME/.config/bspwm/files/dunstrc; 
+}
+
+Peach(){
+  # Bspwm border focused
+  sed -i 's/bspc config focused_border_color\s*\(.*\)/bspc config focused_border_color "#F8BD96"/g' $HOME/.config/bspwm/bspwmrc;
+  # Polibar color
+  sed -i 's/Background-A =\s*\(.*\)/Background-A = #F8BD96/g' $HOME/.config/bspwm/polybar/colors.ini;
+  # Glava
+  sed -i 's/#define COLOR\s*\(.*\)/#define COLOR (#F8BD96)/g' $HOME/.config/glava/bars.glsl;
+  # Rofi
+  sed -i 's/bg:\s*\(.*\)/bg: #F8BD96;/g' $HOME/.config/bspwm/files/rofi/colors.rasi;
+  # Dunst
+  sed -i 's/frame_color =\s*\(.*\)/frame_color = "#F8BD96"/g' $HOME/.config/bspwm/files/dunstrc; 
+}
+
+Yellow(){
+  # Bspwm border focused
+  sed -i 's/bspc config focused_border_color\s*\(.*\)/bspc config focused_border_color "#FAE3B0"/g' $HOME/.config/bspwm/bspwmrc;
+  # Polibar color
+  sed -i 's/Background-A =\s*\(.*\)/Background-A = #FAE3B0/g' $HOME/.config/bspwm/polybar/colors.ini;
+  # Glava
+  sed -i 's/#define COLOR\s*\(.*\)/#define COLOR (#FAE3B0)/g' $HOME/.config/glava/bars.glsl;
+  # Rofi
+  sed -i 's/bg:\s*\(.*\)/bg: #FAE3B0;/g' $HOME/.config/bspwm/files/rofi/colors.rasi;
+  # Dunst
+  sed -i 's/frame_color =\s*\(.*\)/frame_color = "#FAE3B0"/g' $HOME/.config/bspwm/files/dunstrc; 
+}
+
+Green(){
+  # Bspwm border focused
+  sed -i 's/bspc config focused_border_color\s*\(.*\)/bspc config focused_border_color "#ABE9B3"/g' $HOME/.config/bspwm/bspwmrc;
+  # Polibar color
+  sed -i 's/Background-A =\s*\(.*\)/Background-A = #ABE9B3/g' $HOME/.config/bspwm/polybar/colors.ini;
+  # Glava
+  sed -i 's/#define COLOR\s*\(.*\)/#define COLOR (#ABE9B3)/g' $HOME/.config/glava/bars.glsl;
+  # Rofi
+  sed -i 's/bg:\s*\(.*\)/bg: #ABE9B3;/g' $HOME/.config/bspwm/files/rofi/colors.rasi;
+  # Dunst
+  sed -i 's/frame_color =\s*\(.*\)/frame_color = "#ABE9B3"/g' $HOME/.config/bspwm/files/dunstrc; 
+}
+
+Teal(){
+  # Bspwm border focused
+  sed -i 's/bspc config focused_border_color\s*\(.*\)/bspc config focused_border_color "#B5E8E0"/g' $HOME/.config/bspwm/bspwmrc;
+  # Polibar color
+  sed -i 's/Background-A =\s*\(.*\)/Background-A = #B5E8E0/g' $HOME/.config/bspwm/polybar/colors.ini;
+  # Glava
+  sed -i 's/#define COLOR\s*\(.*\)/#define COLOR (#B5E8E0)/g' $HOME/.config/glava/bars.glsl;
+  # Rofi
+  sed -i 's/bg:\s*\(.*\)/bg: #B5E8E0;/g' $HOME/.config/bspwm/files/rofi/colors.rasi;
+  # Dunst
+  sed -i 's/frame_color =\s*\(.*\)/frame_color = "#B5E8E0"/g' $HOME/.config/bspwm/files/dunstrc; 
+}
+
+Blue(){
+  # Bspwm border focused
+  sed -i 's/bspc config focused_border_color\s*\(.*\)/bspc config focused_border_color "#96CDFB"/g' $HOME/.config/bspwm/bspwmrc;
+  # Polibar color
+  sed -i 's/Background-A =\s*\(.*\)/Background-A = #96CDFB/g' $HOME/.config/bspwm/polybar/colors.ini;
+  # Glava
+  sed -i 's/#define COLOR\s*\(.*\)/#define COLOR (#96CDFB)/g' $HOME/.config/glava/bars.glsl;
+  # Rofi
+  sed -i 's/bg:\s*\(.*\)/bg: #96CDFB;/g' $HOME/.config/bspwm/files/rofi/colors.rasi;
+  # Dunst
+  sed -i 's/frame_color =\s*\(.*\)/frame_color = "#96CDFB"/g' $HOME/.config/bspwm/files/dunstrc; 
+}
+
+Sky(){
+  # Bspwm border focused
+  sed -i 's/bspc config focused_border_color\s*\(.*\)/bspc config focused_border_color "#89DCEB"/g' $HOME/.config/bspwm/bspwmrc;
+  # Polibar color
+  sed -i 's/Background-A =\s*\(.*\)/Background-A = #89DCEB/g' $HOME/.config/bspwm/polybar/colors.ini; 
+  # Glava
+  sed -i 's/#define COLOR\s*\(.*\)/#define COLOR (#89DCEB)/g' $HOME/.config/glava/bars.glsl;
+  # Rofi
+  sed -i 's/bg:\s*\(.*\)/bg: #89DCEB;/g' $HOME/.config/bspwm/files/rofi/colors.rasi;
+  # Dunst
+  sed -i 's/frame_color =\s*\(.*\)/frame_color = "#89DCEB"/g' $HOME/.config/bspwm/files/dunstrc; 
+}
+
+#
+# Options
+#
+null(){
+  echo "error: The following required arguments were not provided:
+    color --<option>
+    blur --<option>
+    color --<option> blur --<option>
+
+  USAGE:
+    bspcolor [FLAGS] [OPTIONS]
+
+  For more information try --help or -h
+"   
+}
+
+#
+# Picom
+#
+bluryes(){
+    sed -i 's/^\(backend\)\s*=\s*\(.*\)/backend = "glx" #\1/ #\2g' $HOME/.config/bspwm/files/picom.conf;
+    sed -i 's/corner-radius =\s*\(.*\)/corner-radius = 8/g' $HOME/.config/bspwm/files/picom.conf
+}
+
+blurno(){
+    sed -i 's/^\(backend\)\s*=\s*\(.*\)/backend = "xrender" #\1/ #\2g' $HOME/.config/bspwm/files/picom.conf;
+    sed -i 's/corner-radius =\s*\(.*\)/corner-radius = 0/g' $HOME/.config/bspwm/files/picom.conf
+}
+
+#
+# Famingo
+#
+if [[ "$1" == "color" && "$2" == "--flamingo" && "$3" == "blur" && "$4" == "--no" ]]; then
+    Flamingo;
+    blurno;
+    bspc wm -r;
+  elif [[ "$1" == "color" && "$2" == "--flamingo" && "$3" == "blur" && "$4" == "--yes" ]]; then
+    Flamingo;
+    bluryes;
+    bspc wm -r;
+  elif [[ "$1" == "color" && "$2" == "--flamingo" ]]; then
+    Flamingo;
+    bspc wm -r;
+#
+# Mauve 
+#
+  elif [[ "$1" == "color" && "$2" == "--mauve" && "$3" == "blur" && "$4" == "--no" ]]; then
+    Mauve;
+    blurno;
+    bspc wm -r;
+  elif [[ "$1" == "color" && "$2" == "--mauve" && "$3" == "blur" && "$4" == "--yes" ]]; then
+    Mauve;
+    bluryes;
+    bspc wm -r;
+	elif [[ "$1" == "color" && "$2" == "--mauve" ]]; then
+		Mauve;
+    bspc wm -r;
+#
+# Pink 
+#
+  elif [[ "$1" == "color" && "$2" == "--pink" && "$3" == "blur" && "$4" == "--no" ]]; then
+    Pink;
+    blurno;
+    bspc wm -r;
+  elif [[ "$1" == "color" && "$2" == "--pink" && "$3" == "blur" && "$4" == "--yes" ]]; then
+    Pink;
+    bluryes;
+    bspc wm -r;
+	elif [[ "$1" == "color" && "$2" == "--pink" ]]; then
+		Pink;
+    bspc wm -r;
+#
+# Maroon 
+#
+  elif [[ "$1" == "color" && "$2" == "--maroon" && "$3" == "blur" && "$4" == "--no" ]]; then
+    Maroon;
+    blurno;
+    bspc wm -r;
+  elif [[ "$1" == "color" && "$2" == "--maroon" && "$3" == "blur" && "$4" == "--yes" ]]; then
+    Maroon;
+    bluryes;
+    bspc wm -r;
+	elif [[ "$1" == "color" && "$2" == "--maroon" ]]; then
+		Maroon;
+    bspc wm -r;
+#
+# Red
+#
+  elif [[ "$1" == "color" && "$2" == "--red" && "$3" == "blur" && "$4" == "--no" ]]; then
+    Red;
+    blurno;
+    bspc wm -r;
+  elif [[ "$1" == "color" && "$2" == "--red" && "$3" == "blur" && "$4" == "--yes" ]]; then
+    Red;
+    bluryes;
+    bspc wm -r;
+	elif [[ "$1" == "color" && "$2" == "--red" ]]; then
+		Red;
+    bspc wm -r;
+#
+# Peach
+#
+  elif [[ "$1" == "color" && "$2" == "--peach" && "$3" == "blur" && "$4" == "--no" ]]; then
+    Peach;
+    blurno;
+    bspc wm -r;
+  elif [[ "$1" == "color" && "$2" == "--peach" && "$3" == "blur" && "$4" == "--yes" ]]; then
+    Peach;
+    bluryes;
+    bspc wm -r;
+	elif [[ "$1" == "color" && "$2" == "--peach" ]]; then
+		Peach;
+    bspc wm -r;
+#
+# Yellow
+#
+  elif [[ "$1" == "color" && "$2" == "--yellow" && "$3" == "blur" && "$4" == "--no" ]]; then
+    Yellow;
+    blurno;
+    bspc wm -r;
+  elif [[ "$1" == "color" && "$2" == "--yellow" && "$3" == "blur" && "$4" == "--yes" ]]; then
+    Yellow;
+    bluryes;
+    bspc wm -r;
+	elif [[ "$1" == "color" && "$2" == "--yellow" ]]; then
+		Yellow;
+    bspc wm -r;
+#
+# Green
+#
+  elif [[ "$1" == "color" && "$2" == "--green" && "$3" == "blur" && "$4" == "--no" ]]; then
+    Green;
+    blurno;
+    bspc wm -r;
+  elif [[ "$1" == "color" && "$2" == "--green" && "$3" == "blur" && "$4" == "--yes" ]]; then
+    Green;
+    bluryes;
+    bspc wm -r;
+	elif [[ "$1" == "color" && "$2" == "--green" ]]; then
+		Green;
+    bspc wm -r;
+#
+# Teal
+#
+  elif [[ "$1" == "color" && "$2" == "--teal" && "$3" == "blur" && "$4" == "--no" ]]; then
+    Teal;
+    blurno;
+    bspc wm -r;
+  elif [[ "$1" == "color" && "$2" == "--teal" && "$3" == "blur" && "$4" == "--yes" ]]; then
+    Teal;
+    bluryes;
+    bspc wm -r;
+	elif [[ "$1" == "color" && "$2" == "--teal" ]]; then
+		Teal;
+    bspc wm -r;
+#
+# Blue
+#
+  elif [[ "$1" == "color" && "$2" == "--blue" && "$3" == "blur" && "$4" == "--no" ]]; then
+    Blue;
+    blurno;
+    bspc wm -r;
+  elif [[ "$1" == "color" && "$2" == "--blue" && "$3" == "blur" && "$4" == "--yes" ]]; then
+    Blue;
+    bluryes;
+    bspc wm -r;
+	elif [[ "$1" == "color" && "$2" == "--blue" ]]; then
+		Blue;
+    bspc wm -r;
+#
+# Sky
+#
+  elif [[ "$1" == "color" && "$2" == "--sky" && "$3" == "blur" && "$4" == "--no" ]]; then
+    Sky;
+    blurno;
+    bspc wm -r;
+  elif [[ "$1" == "color" && "$2" == "--sky" && "$3" == "blur" && "$4" == "--yes" ]]; then
+    Sky;
+    bluryes;
+    bspc wm -r;
+	elif [[ "$1" == "color" && "$2" == "--sky" ]]; then
+		Sky;
+    bspc wm -r;
+#
+# Blur
+#
+  elif [[ "$1" == "blur" && "$2" == "--yes" ]]; then
+	  bluryes;
+  elif [[ "$1" == "blur" && "$2" == "--no" ]]; then
+	  blurno;
+  elif [[ "$1" == "-h" || "$1" == "--help" ]];then
+    echo "Colors available:"
+    echo "  
+    --flamingo
+    --mauve
+    --pink
+    --maroon
+    --red
+    --peach
+    --yellow
+    --green
+    --teal
+    --blue
+    --sky
+
+$ bcpcolor --color
+
+    "
+  else
+  null;
+fi

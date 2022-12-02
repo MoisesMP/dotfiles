@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+export status="$(cat ~/.config/bspwm/files/temp/brightness.txt)"
+#export P_DISPLAY="$(xrandr | awk '/ primary/{print $1}')";
+
+# Run xidlehook
+xidlehook --not-when-fullscreen --not-when-audio --timer 110 \
+'brightnessctl set 20%' 'brightnessctl set "$status"' \
+--timer 120 'betterlockscreen -l blur' 'brightnessctl set "$status"' \
+--timer 1800 'systemctl suspend' 'brightnessctl set "$status"';

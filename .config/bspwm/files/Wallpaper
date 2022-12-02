@@ -22,7 +22,7 @@ case ${1} in
             eval "IMG=\$image${NUM}"
             betterlockscreen -u "$IMG" &>/dev/null || exit 1
             bspwall
-            cp "$IMG" /usr/share/wall/lightdm
+            cp $HOME/.cache/betterlockscreen/current/wall_resize.png /usr/share/wall/lightdm
             SELECTED="$(grep -oE '[^/]+$' <<< "$IMG")"
             printf "${C}[${GB}√${NC}${C}] ${W}Selected wallpaper: ${Green}${SELECTED}\n"
         fi

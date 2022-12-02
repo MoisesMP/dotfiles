@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+
+## Autostart -------------------------------------------------#
+
+# Kill if already running
+killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager xidlehook \
+           mpd-notification glava
+
+# Lauch xsettingsd daemon
+xsettingsd &
+
+
+# Lockscreen
+bsplock & 
+
+# polkit agent
+if [[ ! `pidof xfce-polkit` ]]; then
+  /usr/lib/xfce-polkit/xfce-polkit &
+fi
+
+# Lauch keybindings daemon
+sxhkd &
+
+# Enable Super Keys For Menu
+ksuperkey -e 'Super_L=Alt_L|F1' &
+ksuperkey -e 'Super_R=Alt_L|F1' &
+
+# Enable power management
+xfce4-power-manager &
+
+# Fix cursor
+xsetroot -cursor_name left_ptr
+
+# Restore wallpaper
+#nitrogen --restore &
+bspwall
+
+# Start mpd
+exec mpd &
+exec mpd-notification &
+exec mpc update &
+
+# Glava
+glava -d &
+
+# Start bspwm scripts
+bspcomp
+bspdunst 
+
+## Panel
+bspbar &
+
+#Keymap
+setxkbmap -model pc105 -layout latam,us -option
+
+# restart window titles daemon
+while pgrep -u $UID -f bspwm_window_titles >/dev/null; do pkill -f bspwm_window_titles; done
+bspwm_window_titles &

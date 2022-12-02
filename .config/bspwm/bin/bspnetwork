@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+count=0;
+disconnected=;
+ethernet_connected=;
+ssid=$(iwgetid -r);
+
+ID=$(ip link | awk '/state UP / { print $2 }');
+
+get_signal(){
+  STATUS=$(awk '/^\s*w/ { print int($3 *100 /70 ) }' /proc/net/wireless);
+  echo $STATUS
+}
+
+get_icon(){
+  sign="$(get_signal)"
+  current="${sign%%}"
+  if [[ "$current" -eq "0" ]]; then
+      ramp=
+    elif [[ ("$current" -ge "1") && ("$current" -le "30") ]]; then
+        ramp=
+    elif [[ ("$current" -ge "30") && ("$current" -le "60") ]]; then
+        ramp=
+    elif [[ ("$current" -ge "60") && ("$current" -le "100") ]]; then
+        ramp=
+  fi
+  echo $ramp
+}
+
+wireless_connected=$(get_icon);
+
+
+if ( curl -v www.google.com || curl -v 1.1.1.1 ) &>/dev/null; then 
+  if [[ $ID == e* ]]; then
+    echo $ethernet_connected;
+  else
+    echo $wireless_connected" ";
+  fi
+else
+  echo $disconnected" Offline";
+fi
+

@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# You can call this script like this:
+# $./bspbrightness --up
+# $./bspbrightness --down
+ 
+# Get brightness
+get_brightness() {
+	brightness=`xbacklight -get | awk -F "." '{ print $1 }'`"%"
+	echo "$brightness"
+}
+ 
+# Get icons
+get_icon() {
+	bright="$(get_brightness)"
+	current="${bright%%%}"
+	if [[ "$current" -eq "0" ]]; then
+		icon='~/.config/bspwm/files/icons/brightness-low.svg'
+	elif [[ ("$current" -ge "0") && ("$current" -le "33") ]]; then
+		icon='~/.config/bspwm/files/icons/brightness-low.svg'
+	elif [[ ("$current" -ge "33") && ("$current" -le "66") ]]; then
+		icon='~/.config/bspwm/files/icons/sun-bright.svg'
+	elif [[ ("$current" -ge "66") && ("$current" -le "100") ]]; then
+		icon='~/.config/bspwm/files/icons/brightness.svg'
+	fi
+}
+
+filetemp() {
+	status="$(get_brightness)"
+	echo $status > ~/.config/bspwm/files/temp/brightness.txt
+}
+ 
+# Increase Volume
+inc_brightness() {
+	xbacklight -inc 5% && filetemp && get_icon && dunstify -u low --replace=69 -i "$icon" "Brightness : $(get_brightness)"
+}
+ 
+# Decrease Volume
+dec_brightness() {
+	xbacklight -dec 5% && filetemp && get_icon && dunstify -u low --replace=69 -i "$icon" "Brightness : $(get_brightness)"
+}
+ 
+# Execute accordingly
+if [[ "$1" == "--get" ]]; then
+	get_brightness
+elif [[ "$1" == "--up" ]]; then
+	inc_brightness
+elif [[ "$1" == "--down" ]]; then
+	dec_brightness
+else
+	get_brightness
+fi
